@@ -1,0 +1,44 @@
+.navbar-brand > img {
+    max-width: 6%;
+    float:left;
+    clear:left;
+}
+
+.navbar-brand > span{
+    padding-left:10px;
+}
+
+.btn-rush {
+    font-size: 12px;
+    color:#fff;
+    background: 0 0;
+    font-weight: normal;
+    border: 2px solid #fff;
+    padding:10px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.btn-rush:hover {
+    color:#fff;
+    font-size:14px;
+}
+
+.header-line{
+    border: 1px solid #fff;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:40px;
+    width:60px;
+}
+
+.intro-overlay:before{
+    background-color:rgba(255,0,0,0.5);
+}
+
+#about{
+    background-color: #fff;
+}
+.container{
+    max-width:100%;
+}
