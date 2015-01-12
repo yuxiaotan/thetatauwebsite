@@ -105,34 +105,50 @@
 
     <!-- Download Section -->
     <section id="whatwedo" class="content-section text-center">
-      <div id="wwd-menu">
+      <!--
+      <div class="wwd-selection" id="wwd-menu">
         <div class="row">
           <div class="col-md-4" id="professional">Hello</div>
           <div class="col-md-4" id="social">World</div>
           <div class="col-md-4" id="philanthropy">Tab</div>
         </div>
       </div>
-      <div id="prof-text">
-        prof
-      </div>
-      <div id="social-text">
-        social
-      </div>
-      <div id="philanthropy-text">
-        philanthropy
-      </div>
-    <!--
+
+      <div class="wwd-text">
+        <div id="prof-text">
+          prof
+        </div>
+        <div id="social-text">
+          social
+        </div>
+        <div id="philanthropy-text">
+          philanthropy
+        </div>
+      </div> -->
+
       <div role="tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#home" aria-controls="homes" role="tab" data-toggle="tab">Home</a></li>
-          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Tab</a></li>
+        <ul class="nav nav-tabs nav-justified" role="tablist" id="wwd-nav">
+          <li role="presentation" class="active"><a href="#professional" aria-controls="homes" role="tab" data-toggle="tab">Professional</a></li>
+          <li role="presentation"><a href="#social" aria-controls="profile" role="tab" data-toggle="tab">Social</a></li>
+          <li role="presentation"><a href="#philanthropy" aria-controls="profile" role="tab" data-toggle="tab">Philanthropy</a></li>
+
+          <li role="presentation" class="disabled">
+            <a href="#unclickable-social" aria-controls="profile">
+              <div id="wwd-display">
+                <div class="wwd-line"></div>
+                <p> WHAT WE DO </p>
+                <p> Learn more about our involvments </p>
+              </div>
+            </a>
+          </li>
         </ul>
 
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="home"> home </div>
-          <div role="tabpanel" class="tab-pane" id="profile"> profile </div>
+          <div role="tabpanel" class="tab-pane active" id="professional"> professional</div>
+          <div role="tabpanel" class="tab-pane" id="social"> social</div>
+          <div role="tabpanel" class="tab-pane" id="philanthropy"> Philanthropy </div>
         </div>
-      </div> -->
+      </div>
     </section>
 
     <!-- Contact Section -->

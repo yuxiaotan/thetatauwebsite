@@ -76,6 +76,7 @@
 #whatwedo{
     padding-top:0px;
     border:2px solid red;
+    color: black;
 }
 
 #profile{
@@ -91,4 +92,37 @@
     color:black;
     height:70%;
     border: 2px solid black;
+}
+
+.disabled>a:hover{
+    cursor:default !important;
+    border:none;
+}
+
+.nav-tabs>li>a{
+    border-radius:0px;
+    max-height:25%;
+    height:100px;
+    margin-top:0px;
+    padding-top:0px;
+}
+
+.nav-tabs>li.disabled{
+    padding-bottom:0px;
+}
+
+.nav-tabs>li.active>a{
+    border-radius:0px;
+    max-height:25%;
+    height:100px;
+    margin-top:0px;
+    padding-top:0px;
+}
+
+#wwd-nav{
+    width:100%;
+}
+
+.wwd-line{
+    border: 1px solid black;
 }
