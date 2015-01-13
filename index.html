@@ -11,6 +11,7 @@
 
     <title>Cornell Theta Tau -- Professional Engineering Fraternity</title>
 
+    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,8 +21,8 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,6 +62,19 @@
                         <a class="page-scroll" href="#whatwedo">What We Do</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#ourpast">Our Past</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#brothers">Brothers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#rush">Rush</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#application">Application</a>
+                    </li>
+
+                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -77,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Theta Tau</h1>
-                        <p class="intro-text">The first and foremost co-ed professional engineering fraternity at Cornell.</p>
+                        <p class="intro-text" id="intro-reduce">The first and foremost co-ed professional engineering fraternity at Cornell.</p>
                         <div class = "header-line"></div>
                         <a href="#rush" class="btn btn-rush page-scroll">
                           Rush Info
@@ -106,17 +120,18 @@
     <!-- Download Section -->
     <section id="whatwedo" class="content-section text-center">
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
           <ul class="nav nav-tabs nav-justified" id="wwd-menu">
-            <li class="active">
+
+            <li>
               <a href="#professional" data-toggle="tab">
                 <div class="wwd-sem">
                   <div class="wwd-circle-wrapper"><div class="wwd-circle"></div></div>
                   <br>
-                  <div class="wwd-circle-text-wrapper">PROFESSIONAL</div>
+                  <div class="wwd-circle-text-wrapper">PROFESSIONAL&nbsp;&nbsp;</div>
                   <br>
-                  <div class="wwd-circle-text-wrapper">Learn about our Professional Events</div>
+                  <div class="italic wwd-circle-text-wrapper">Learn about our Professional Events!</div>
                 </div>
               </a>
             </li>
@@ -126,66 +141,231 @@
                 <div class="wwd-sem">
                   <div class="wwd-circle-wrapper"><div class="wwd-circle"></div></div>
                   <br>
-                  <div class="wwd-circle-text-wrapper">SOCIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div class="wwd-circle-text-wrapper">SOCIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                   <br>
-                  <div class="wwd-circle-text-wrapper">Learn about how we have fun during our free time!</div>
+                  <div class="italic wwd-circle-text-wrapper">Learn about how we have fun!</div>
                 </div>
               </a>
             </li>
 
-            <li>
+            <li class="active">
             <a href="#philanthropy" data-toggle="tab">
                 <div class="wwd-sem">
                   <div class="wwd-circle-wrapper"><div class="wwd-circle"></div></div>
                   <br>
                   <div class="wwd-circle-text-wrapper">PHILANTHROPY</div>
                   <br>
-                  <div class="wwd-circle-text-wrapper">Learn about how we help our community</div>
+                  <div class="italic wwd-circle-text-wrapper">Learn about how we help our community!</div>
                 </div>
               </a>
             </li>
 
-           <li id="wwd-description">
-                What we Do
+            <li>
+              <a id="wwd-description">
+                <div class="wwd-sem">
+                  <div class="wwd-circle-wrapper"><div class="wwd-line"></div></div>
+                  <br>
+                  <div class="wwd-description-text-wrapper">WHAT<br>WE DO</div>
+                  <div class="italic wwd-circle-text-wrapper">Our dedication to the world around us.</div>
+                </div>
+              </a>
             </li>
+
           </ul>
         </div>
       </div>
 
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="professional"> professional</div>
-        <div role="tabpanel" class="tab-pane" id="social"> social</div>
-        <div role="tabpanel" class="tab-pane" id="philanthropy"> Philanthropy </div>
-      </div>
-    <!--
-      <div role="tabpanel">
-        <ul class="nav nav-tabs nav-justified" role="tablist" id="wwd-nav">
-          <li role="presentation" class="active" id="profid"><a href="#professional" data-toggle="tab">Professional</a></li>
-          <li role="presentation"><a href="#social" aria-controls="profile" role="tab" data-toggle="tab">Social</a></li>
-          <li role="presentation"><a href="#philanthropy" aria-controls="profile" role="tab" data-toggle="tab">Philanthropy</a></li>
-
-          <li role="presentation">
-            <a href="#professional" data-toggle = "tab">
-              <p>Professional</p>
-            </a>
-          </li>
-
-          <li role="presentation" class="disabled">
-            <div role="tab" data-toggle = "tab">
-              <div id="wwd-display">
-                <div class="wwd-line"></div>
-                <p> WHAT WE DO </p>
-              </div>
+        <div role="tabpanel" class="tab-pane" id="professional">
+          <div class="sem-role-wrapper">
+            <div class="sem-line"></div>
+            <div class="sem-text">
+              PROFESSIONAL
             </div>
-          </li>
-        </ul>
+            <div class="sem-italic-text">
+              A couple words from our Professional Chair
+           </div>
+          </div>
+          <div class="sem-info-wrapper">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 sem-left-col-text">
+                  <p> Theta Tau gives its members a competitive edge with an expansive professional network and the tools to develop the qualities top companies and firms look for during job recruitment.</p>
+                  <p> A strong sense of professionalism resonates throughout the Brotherhood; professional development plays an integral part during the New Member Education process, and members can continue to take advantage of the opportunities Theta Tau has to offer up through graduation and after entering the work place. </p>
+                  <p> Our organization ultimately strives to develop its members such that they can join the professional network that helped them get to where they are, and continue the cycle of using the network and giving back to the Brotherhood. </p>
+                </div>
+                <div class="col-md-4 sem-right-col-text">
+                  <p> Many of our members have gone on to pursue full-time positions, in an array of different disciplines, at some of the top companies and firms. These include: Google, Microsoft, Facebook, Goldman Sachs, Deloitte Consulting, Accenture, and more. Many of our members have also gone on to pursue a Masters of Ph.D. at some of the world's top universities. </p>
+                  <p> Some of the tools available to members include: interview and network presentations, mock interviews, resume and cover letter critiques and a collection of reference resumes, and cover letters and interview questions for reference. Theta Tau not only teaches its members how to best succeed in a professional environment, but also provides a network in which those skills can be put to work!</p>
 
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="professional"> professional</div>
-          <div role="tabpanel" class="tab-pane" id="social"> social</div>
-          <div role="tabpanel" class="tab-pane" id="philanthropy"> Philanthropy </div>
+                  <div class="sem-sign-off">
+                    <div class="row">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-6">
+                        <div class="sem-name">
+                          Emily Dothe
+                        </div>
+                        Professional Chair
+                      </div>
+                      <div class="col-sm-3">
+                        <img src="img/dothe.jpg" alt="dothe-sem-chair" class="img-circle">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+
+          </div>
+
+        </div> <!-- End of Professional Section -->
+
+        <div role="tabpanel" class="tab-pane" id="social">
+          <div class="sem-role-wrapper">
+            <div class="sem-line"></div>
+            <div class="sem-text">
+              SOCIAL
+            </div>
+            <div class="sem-italic-text">
+              Hear from our social chairs about our social events!
+           </div>
+          </div>
+
+          <div class="sem-info-wrapper">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 sem-left-col-text">
+                  <p>At Cornell Theta Tau, the bonds we make are integral to our Cornell experiences and even to our future professional careers. Co-Events Chairmen Adrian Wu and Micaella Zubkov are in charge of planning and organizing interactive activities at which brothers strengthen friendships and make memories. The brothers of Theta Tau have enjoyed Formals scheduled at the end of every semester, date nights, pledge class bonding events, and excursions to off-campus activities, such as apple picking and team building. </p>
+                <p>Events are also focused on the Cornell community. Inter-fraternity events with other professional fraternities at Cornell as well as Slope Day are a few favorite events.</p>
+
+                  <div class="sem-sign-off">
+                    <div class="row">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-6">
+                        <div class="sem-name">
+                          Micaella Zubkov
+                        </div>
+                        Co-Social Chair
+                      </div>
+                      <div class="col-sm-3">
+                        <img src="img/misha_chair.jpg" alt="misha-sem-chair" class="img-circle">
+                      </div>
+                    </div>
+                  </div>
+
+                </div> <!-- end col-md-4 -->
+
+                <div class="col-md-4 sem-right-col-text">
+                  <p>Currently Contemplating the best wisdom to be shared!</p>
+
+                  <div class="sem-sign-off">
+                    <div class="row">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-6">
+                        <div class="sem-name">
+                          Adrian Wu
+                        </div>
+                        Co-Social Chair
+                      </div>
+                      <div class="col-sm-3">
+                        <img src="img/adrian_chair.jpg" alt="adrian-sem-chair" class="img-circle">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+
+          </div>
+
+
+
+
+        </div> <!-- End of Social Section -->
+
+        <div role="tabpanel" class="tab-pane active" id="philanthropy">
+          <div class="sem-role-wrapper">
+            <div class="sem-line"></div>
+            <div class="sem-text">
+              PHILANTHROPY
+            </div>
+            <div class="sem-italic-text">
+              A couple words from our Philanthropy Chair
+           </div>
+          </div>
+
+          <div class="sem-info-wrapper">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 sem-left-col-text">
+                  <p>One of the three main pillars of Theta Tau is service, and throughout the year, our brothers look forward to giving back to the Ithaca-Tompkins County community at large.</p>
+                  <p>Some of the events include Into the Streets, a student-led program that sponsors an enormous annual service event, and Truss Days, an event held by Habitat for Humanity that builds roof trusses for families in need of housing. Many of our brothers take part in Cornell’s YOURS outreach program, which aims to provide opportunities and mentoring for students living in mobile home parks in the area.</p>
+                </div>
+                <div class="col-md-4 sem-right-col-text">
+                  <p>In addition to mentoring, we present simple engineering concepts to the students in an interactive, hands-on method that fosters interest in math, science, and engineering.</p>
+
+                  <div class="sem-sign-off">
+                    <div class="row">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-6">
+                        <div class="sem-name">
+                          Sahitya Mantravadi
+                        </div>
+                        Philanthropy Chair
+                      </div>
+                      <div class="col-sm-3">
+                        <img src="img/sahi.jpg" alt="sahi-sem-chair" class="img-circle">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+
+          </div>
+
+        </div> <!-- End Philanthropy Section -->
+      </div>
+    </section>
+
+
+    <!-- WHERE WE'VE BEEN SECTION -->
+
+    <section id="ourpast" class="content-section text-center">
+      <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-2 op-panel-text">
+          <div class="op-line"></div>
+          <div class="op-top-text">
+            WHERE WE'VE BEEN
+          </div>
+          <div class="op-sm-text">
+            Top Companies, Best Firms, and a multitude of experiences.
+          </div>
+
         </div>
-      </div> -->
+
+        <div class="col-md-6 op-panel-companies">
+        </div> <!-- End Panel Companies -->
+
+        <div class="col-md-2"></div>
+      </div>
+    </section>
+
+    <!-- OUR BROTHERS SECTION -->
+    <section id="brothers" class="content-section text-center">
+      <div class="brothers-header">
+        <div class="brothers-line"></div>
+        <div class="brothers-text">THE BROTHERS</div>
+        <div class="brothers-small-text">
+          Get to know the Brothers. See where they are professionally both on and off campus.
+        </div>
+
+        <div class="brothers-core">
+        </div> <!-- End Core Eboard -->
+      </div> <!-- End Brothers-Header" -->
+
     </section>
 
     <!-- Footer -->
