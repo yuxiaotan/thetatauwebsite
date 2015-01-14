@@ -56,5 +56,25 @@
     .dothe-text-mobile>p{
         font-size:9px;
     }
+
+    .navbar-custom .navbar-brand{
+        font-weight:400;
+        width:250px;
+        font-size:16px;
+        padding-top:20px;
+    }
+
+    .op-panel-text{
+        height:33%;
+    }
+
+    .op-panel-companies{
+        height:50%;
+    }
+
+    #ourpast{
+        padding-top:20px;
+        height:550px;
+    }
 }
 
