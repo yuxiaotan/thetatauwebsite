@@ -11,3 +11,8 @@
     text-align:left;
     padding-bottom:5%;
 }
+
+html{
+    overflow-x:scroll;
+    overflow-y:inherit;
+}
