@@ -405,6 +405,7 @@ ol, ul{list-style:none;}
 .op-panel-companies{
     border:1px solid #eb383f;
     height:100%;
+    width:60%;
     background: url(../img/where-weve-been.png) no-repeat center scroll;
     background-size:100%;
     -webkit-background-size: cover;
