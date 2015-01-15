@@ -64,19 +64,22 @@
     }
 
     .brothers-pc{
-        height:2100px;
+        height:2500px;
     }
     .last-brothers-pc-delta{
         height:1100px;
     }
     .last-brothers-pc-epsilon{
-        height:1100px;
+        height:1500px;
+    }
+    .last-brothers-pc-zeta{
+        height:600px;
     }
 
 
     .pc-img-only >img{
         margin-top:10px;
-        max-height:270px;
+        max-height:350px;
     }
 
 
