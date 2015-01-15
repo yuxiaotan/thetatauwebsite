@@ -487,7 +487,6 @@ ol, ul{list-style:none;}
 }
 
 .brothers-core{
-    border:1px solid red;
     height:350px;
 }
 
@@ -579,7 +578,6 @@ ol, ul{list-style:none;}
     height:200px;
     color:black;
     background-color:white;
-    border:1px solid red;
 }
 
 .brothers-pc-epsilon{
@@ -866,7 +864,6 @@ ol, ul{list-style:none;}
     padding-top:0px;
     padding-bottom:0px;
     height:200px;
-    border:1px solid red;
     background-color:#ed3940;
 }
 
