@@ -369,6 +369,10 @@ ol, ul{list-style:none;}
     font-size:14px;
 }
 
+.co-social-speech-sm >p{
+    font-size:12px;
+}
+
 .dothe-text-mobile >p{
     font-size:12px;
 }

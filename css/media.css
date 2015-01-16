@@ -53,10 +53,6 @@
         max-width:25px;
     }
 
-    .dothe-text-mobile>p{
-        font-size:9px;
-    }
-
     .navbar-custom .navbar-brand{
         font-weight:400;
         width:250px;
@@ -70,11 +66,15 @@
 
     .op-panel-companies{
         height:50%;
+        width:100%;
     }
 
     #ourpast{
         padding-top:20px;
         height:550px;
     }
-}
 
+    #whatwedo > .tab-content {
+        height:1200px;
+    }
+}
