@@ -1,5 +1,6 @@
 @media(max-width:800px){
     #contact{
-        height:450px;
+        height:550px;
+        padding-left:7px;
     }
 }
