@@ -19,6 +19,10 @@ p{
   letter-spacing: .15px;
 }
 
+.container{
+  max-width: 960px;
+}
+
 .decorated{
   color: grey;
   text-transform: uppercase;
@@ -46,16 +50,20 @@ p{
 /*Color Utility Classes*/
 .bb-grey{border-bottom: solid 1px #F2F2F2;}
 .bb-darkgrey{border-bottom: solid 1px #DDDDDD;}
+.bb-darkergrey{border-bottom: solid 1px #222222;}
 
 .b-grey{border: 1px solid #eeeeee;}
 
-.bg-lightgrey-2{ background-color:#FAFAFA; }
+.bg-lightgrey-2{ background-color:#EAEAEA; }
 .bg-grey{ background-color:#F2F2F2; }
 .bg-black{ background-color:#222; }
 .bg-white{ background-color:white; }
 .bg-red{background-color: #d24040;}
+.bg-header{background: url(../images/header.png);}
 
 .white{color:white;}
+
+.offwhite{color:#DDDDDD;}
 
 /*Placement Utility Classes*/
 .inline{display: inline;}
@@ -106,6 +114,7 @@ p{
 .pt2{padding-top:1.6em;}
 .pt3{padding-top:2.4em;}
 .pt4{padding-top:3.2em;}
+.pt6{padding-top:5.8em;}
 .pt8{padding-top: 6.4em;}
 .pt12{padding-top: 9.6em;}
 
@@ -214,31 +223,38 @@ img {
 }
 
 /*Input Styling*/
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-  /*Text within input*/
-  text-transform: uppercase;
-  font-size: .75em;
-  letter-spacing: .079em;
-
-  height: 45px;
-  padding: 10px 12px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: transparent;
-  border: 1px solid #D1D1D1;
+input[type="email"].contact,
+input[type="number"].contact,
+input[type="search"].contact,
+input[type="text"].contact,
+input[type="tel"].contact,
+input[type="url"].contact,
+input[type="password"].contact,
+textarea.contact,
+select.contact {
+  color: #444444;
+  border: 1px solid #666666;
   border-radius: 2px;
 }
 
 .input-app{
   font-weight: 400;
   color: #333333 !important;
-  border-color:#aaaaaa !important;
+  border: 1px solid  #d8d8d8 !important;
+  -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+}
+
+
+.input-app:focus{
+  background-color:#dbe9f1  !important;
+  border-color: #c6d2d9 !important;
+}
+
+.button.contact,
+button.contact{
+  color: o#666666;
+  border-color: #666666;
 }
 
 .button,
@@ -267,12 +283,12 @@ input[type="button"].button-outline {
 
 .stagger1{
   position:relative;
-  top: -50px;
+  top: -75px;
   border-radius: 2px;
 }
 .stagger3{
   position:relative;
-  top: -150px;
+  top: -75px;
   border-radius: 2px;
 }
 
@@ -409,6 +425,11 @@ p{
   color: #333;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.copy{
+  font-size: .8em;
+  text-transform: uppercase;
   letter-spacing: .1em;
 }
 
@@ -416,6 +437,14 @@ p{
   font-size:1em;
   color: grey;
   font-style: italic;
+}
+
+.capitalize{
+  text-transform: uppercase;
+}
+
+.lh2{
+  line-height: 1.5em;
 }
 
 .bold{font-weight:600}
@@ -428,8 +457,9 @@ p{
 
 .b-grey{border: 1px solid #eeeeee;}
 
-.bg-lightgrey-2{ background-color:#FAFAFA; }
-.bg-grey{ background-color:#F2F2F2; }
+.bg-lightgrey{ background-color:#DDDDDD; }
+.bg-lightgrey-2{ background-color:#F8F8F8; }
+.bg-grey{ background-color:#363636; }
 .bg-black{ background-color:#222; }
 .bg-white{ background-color:white; }
 .bg-red{background-color: #d24040;}
@@ -463,12 +493,17 @@ p{
 .w-800{max-width:800px;}
 .w-960{max-width:960px;}
 
+.width-auto{
+  width: auto;
+}
+
 .m0{margin:0}
 
 .mt0{margin-top:0em;}
 .mt1{margin-top:.8em;}
 .mt2{margin-top:1.6em;}
 .mt3{margin-top:2.4em;}
+.mt4{margin-top:2.4em;}
 
 .mr1{margin-right:.8em;}
 .mr2{margin-right:1.6em;}
@@ -591,33 +626,39 @@ img {
   }
 }
 
+
+:-moz-placeholder{
+   color: #555555 !important;
+}
+::-moz-placeholder{
+   color: #555555 !important;
+}
+:-ms-input-placeholder{
+   color: #555555 !important;
+}
+::-webkit-input-placeholder {
+   color: #555555 !important;
+}
+
 /*Input Styling*/
 input[type="email"],
 input[type="number"],
-input[type="search"],
 input[type="text"],
-input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea,
 select {
   /*Text within input*/
-  text-transform: uppercase;
-  font-size: .75em;
-  letter-spacing: .079em;
-
+  font-size: 1em;
+  font-weight: 200;
+  color: #444444;
   height: 45px;
-  padding: 10px 12px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 10px 18px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: transparent;
   border: 1px solid #D1D1D1;
   border-radius: 2px;
 }
 
-.input-app{
-  font-weight: 400;
-  color: #333333 !important;
-  border-color:#aaaaaa !important;
-}
 
 .button,
 button,
@@ -639,19 +680,8 @@ input[type="button"] {
 button.button-outline,
 input[type="submit"].button-outline,
 input[type="reset"].button-outline,
-input[type="button"].button-outline {
+input[type="button"].button-outline{
   font-weight: 400;
-}
-
-.stagger1{
-  position:relative;
-  top: -50px;
-  border-radius: 2px;
-}
-.stagger3{
-  position:relative;
-  top: -150px;
-  border-radius: 2px;
 }
 
 .relative{
@@ -769,18 +799,66 @@ label svg{
   margin-bottom:0em;
 }
 
-.footer .nav-item a{
-
-  text-transform:uppercase;
-  letter-spacing: .1em;
-  font-size: .7em;
-  font-weight:400;
-  color: #ccc;
-  text-decoration: inherit;
+.footer a{
+  text-decoration: none;
 }
+
+
+/*Custom Input*/
+
+label.myLabel input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+
+/***** Example custom styling *****/
+.myLabel {
+  border-radius: 2px;
+  background: white !important;
+  border: 0px solid grey !important;
+  color: grey !important;
+  -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+}
+.myLabel:hover {
+  background-color:#dddddd !important;
+  transform:translate(0,-1px); !important;
+}
+.myLabel:active {
+
+}
+
+.myLabel :invalid + span {
+  color: red;
+}
+.myLabel :valid + span {
+  color: green;
+}
+
+.carousel .button-outline{
+  border: 0px solid transparent;
+  -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+}
+
+.carousel .button-outline:hover{
+  top: 0;
+  color: grey;
+  border: 1px solid #333333;
+}
+
+.carousel .button-outline:active{
+  color:;
+  border: 1px solid #FAFAFA;
+}
+
+.carousel .button-outline:focus{
+  color: white;
+  border: 1px solid #FAFAFA;
+}
+
 
 @media max-width: 400px) {
 .bp550{
 
 }
-

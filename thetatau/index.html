@@ -23,9 +23,13 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dropzone.css">
+
+  <!-- Javascript plugins -->
+  <script src="js/dropzone.js"></script>
 
   <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––s––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
@@ -75,7 +79,7 @@
   </div>
   <!-- Header
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="bg-black">
+  <div class="bg-header">
     <div class="container pt12 pb12 center">
       <div class="row">
           <h1 class="capitalize white bold mt2">Theta Tau</h1>
@@ -85,46 +89,50 @@
 
 <!-- Apply Now
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container bg-lightgrey-2 bb-grey pt4 pb6 pl2 pr2 block stagger1">
+  <div class="container w-640 bg-lightgrey-2 bb-grey pt4 pb3 pl2 pr2 block stagger1">
     <div class="row w-320 mx-auto">
       <div class="twelve columns">
         <div class="row mx-auto">
-            <h6 class="decorated-2 center mb4 mt2">Fall Rush</h6>
+            <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
         </div>
+
+        <form>
+
+        <div class="row mx-auto">
+            <input type="email" class="input-app u-full-width" placeholder="Full Name"></input>
+        </div>
+
         <div class="row mx-auto">
             <input type="email" class="input-app u-full-width" placeholder="Email Address"></input>
         </div>
+
         <div class="row mx-auto">
-            <input type="file" class="input-app twelve columns sm-2" placeholder=""></input>
-            <input type="file" class="input-app  twelve columns sm-2" placeholder=""></input>
+          <input type="file" accept=".pdf,.docx,.doc" required />
         </div>
-        <div class="row mx-auto mt3">
+        <div class="row mx-auto">
+          <input type="file" accept="image/*" required />
+        </div>
+        </div>
+
+        <div class="row mx-auto mt1">
             <button class="button button-primary mx-auto block">Apply</button>
         </div>
-      </div>
+       
+        </form>
+
     </div>
   </div>
 
   <!-- About Us
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container pt4 pb1">
-    <div class="row mx-auto w-800">
-      <div class="three columns pt8">
-        <svg width="77px" height="77px" viewBox="0 0 77 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-          <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-          <title>Oval 1</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <circle id="Oval-1" fill="#010101" sketch:type="MSShapeGroup" cx="38.5" cy="38.5" r="38.5"></circle>
-          </g>
-        </svg>
-        <p class="caption mb0 mt1">Andrew Aquino</p>
+  <div class="container pt0 pb1 ">
+    <div class="row mx-auto">
+      <div class="three columns pt2">
       </div>
       <div class="nine columns  pt2 pb2">
         <div class="row">
           <h6 class="decorated">Our Story</h6>
-          <h2 class="bold">We are the first & foremost professional engineering fraternity at Cornell.</h2>
+          <h2 class="bold">We are the first & foremost professional engineering fraternity at Cornell University.</h2>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
             <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -137,11 +145,13 @@
         </svg>
       </div>
     </div>
-  </div>
-  <div class="container bb-grey">
-    <div class="row mx-auto w-800">
-    <div class="three columns pt2 pb2 pl2 pr2">
+    <div class="row mx-auto">
+    <div class="two columns pt2 pb0">
+      <img src="images/avatar.png"></img>
+      <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
+      <p class="caption">Marketing Chair</p>
     </div>
+    <div class="one column pb2"></div>
     <div class="nine columns pt2 pb6">
       <div class="row">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam porttitor sem, eu semper odio elementum et. Nulla non purus justo. In imperdiet egestas diam, id tempus lectus. Donec eget bibendum massa. Nam iaculis pretium ipsum, nec varius mauris ullamcorper at. Duis eget mi sit amet neque commodo blandit. Sed bibendum libero sit amet massa luctus rutrum.</p>
@@ -151,51 +161,63 @@
     </div>
   </div>
 
-<!-- <div class="container pb8 pt8 bb-grey stagger1">
-  <div class="row w-800 mx-auto">
-    <div class="four columns center">
-          <h5 class="">Professional</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<div class="bg-black">
+  <div class="container pt6 pb6 pl2 pr2">
+        <div class="row">
+          <h6 class="decorated center">Our Story</h6>
+          <h2 class="bold offwhite center">What we do</h2>
+        </div>
+        <div class="row mb2">
+          <div class="w-50 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <path d="M1.5,1 L50.3364601,1" id="Line" stroke="#E03B3B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"/>
+                </g>
+            </svg>
+          </div>
+        </div>
+    <div class="row mb4 mt4">
+        <div class="mx-auto width_auto w-640 carousel">
+          <button class="button button-outline four columns">Philanthropy</button>
+          <button class="button button-outline four columns">Brotherhood</button>
+          <button class="button button-outline four columns">Professionalism</button>
+        </div>
     </div>
-    <div class="four columns center">
-
-          <h5 class="">Philanthropy</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+    <div class="row mt4">
+      <div class="six columns offwhite">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam porttitor sem, eu semper odio elementum et. Nulla non purus justo. In imperdiet egestas diam, id tempus lectus. Donec eget bibendum massa. Nam iaculis pretium ipsum, nec varius mauris ullamcorper at.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam porttitor sem, eu semper odio elementum et. Nulla non purus justo. In imperdiet egestas diam, id tempus lectus. Donec eget bibendum massa.</p>
+      </div>
+      <div class="six columns offwhite bb-darkergrey mb2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam porttitor sem, eu semper odio elementum et. Nulla non purus justo. In imperdiet egestas diam, id tempus lectus. Donec eget bibendum massa. Nam iaculis pretium ipsum, nec varius mauris ullamcorper at.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam porttitor sem, eu semper odio elementum et. Nulla non purus justo. In imperdiet egestas diam, id tempus lectus. Donec eget bibendum massa.</p>
+      </div>
     </div>
-    <div class="four columns center">
-
-          <h5 class="">Brotherhood</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="row">
+      <div class="two column right">
+        <img class="" src="images/avatar.png"></img>
+        <h6 class="h7 decorated-2 mb0 mt1 ">Andrew Aquino</h6>
+        <p class="caption ">Marketing Chair</p>
+      </div>
     </div>
   </div>
-</div> -->
-
+</div>
 
   <!-- Where We've Been
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container bb-grey pt8 pb12">
         <div class="row">
-          <h6 class="decorated center">Folio</h6>
-          <h2 class="bold center">We've been to great places</h2>
+          <h6 class="decorated">Folio</h6>
+          <h2 class="bold">We've been to great places</h2>
         </div>
 
         <div class="row">
-          <div class="w-50 mx-auto">
-
-
-
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
-                <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-                <title>Line</title>
-                <desc>Created with Sketch.</desc>
-                <defs/>
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                     <path d="M1.5,1 L50.3364601,1" id="Line" stroke="#E03B3B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"/>
                 </g>
             </svg>
-
-
-          </div>
         </div>
 
         <div class="row pt3">
@@ -240,9 +262,8 @@
 
 <!-- Eboard Header
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container pt8 pb0">
+  <div class="container pt4 pb4">
         <div class="row">
-          <h6 class="decorated center">Meet Us</h6>
           <h2 class="bold center">the Brotherhood</h2>
         </div>
 
@@ -269,11 +290,12 @@
 
 <!-- Eboard
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="bg-lightgrey-2">
   <div class="container bb-grey pt3 pb4">
-    <div class="row">
+    <div class="row mb2 mt2">
       <h6 class="decorated">Eboard</h6>
     </div>
-    <div class="row">
+    <div class"row">
 
       <div class="two p-columns sublabel">
         <img src="images/photo.png"></img>
@@ -343,7 +365,7 @@
 
     </div>
   </div>
-
+</div>
 <!-- Brothers
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container bb-grey pt4 pb8">
@@ -429,41 +451,24 @@
   <div class="row bg-black pt4 pb4">
   <!-- Contact Us
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container pt8 pb8 w-320">
-    <div class="row">
-      <div class="twelve columns">
-        <form>
-          <input type="email" class="contact u-full-width" placeholder="Email"></input>
-          <input type="text" class="contact u-full-width" placeholder="Message"></input>
-          <button type="submit" class="button button-outline contact mx-auto block">Send</button>
-        </form>
-      </div>
-    </div>
-  </div>
     <div class="container pt2 h7">
       <div class="row footer">
-        <div class="four columns">
-          <h6 class="h7 decorated-2 grey">Navigation</h6>
-          <li class="nav-item grey"><a href="#">Home</a></li>
-          <li class="nav-item grey"><a href="#">Apply</a></li>
-          <li class="nav-item grey"><a href="#">About</a></li>
-          <li class="nav-item grey"><a href="#">Portfolio</a></li>
-          <li class="nav-item grey"><a href="#">Brothers</a></li>
-          <li class="nav-item grey"><a href="#">Contact</a></li>
+        <div class="row">
+        <div class="eight columns">
+          <h6 class="h7 decorated-2 white mb3">Contact</h6>
         </div>
-        <div class="four columns">
-          <h6 class="h7 decorated-2 grey">Rush</h6>
-          <li class="nav-item grey"><a href="#">FAQ</a></li>
-          <li class="nav-item grey"><a href="#">Schedule</a></li>
-          <li class="nav-item grey"><a href="#">Apply</a></li>
+        <div class="row">
+          <div class="six columns">
+          <p class="grey lh2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, purus sit amet hendrerit consectetur, urna velit blandit odio, nec venenatis metus sem non tellus. Nam mattis lorem eget nisi accumsan consequat.</p>
+          <h6 class="copy mb0 regular h7 grey left decorated-2">© 2015 Theta Tau Cornell </h6>
+          </div>
+          <div class="three columns right">
+            <p class="grey lh2">Andrew Aquino<br>516.754.4145<br><a href="#">aja255@cornell.edu</a></p>
+          </div>
+          <div class="three columns right">
+            <p class="grey lh2">Andrew Aquino<br>516.754.4145<br><a href="#">aja255@cornell.edu</a></p>
+          </div>
         </div>
-        <div class="four columns right">
-          <h6 class="h7 decorated-2 grey">Contact</h6>
-
-        </div>
-      </div>
-      <div class="row pt3 mt2">
-          <h6 class="mb0 regular h7 grey center">Copyright Cornell Theta Tau - All Rights Reserved</h6>
       </div>
     </div>
   </div>
