@@ -617,28 +617,11 @@ ol, ul{list-style:none;}
 }
 
 .pc-img-only > img {
-    height:90%;
-    width: 90%;
-    max-height:130px;
+    width:100%;
     -moz-box-shadow: 2px 3px 5px 5px #ccc;
     -webkit-box-shadow: 2px 3px 5px 5px #ccc;
     box-shadow: 2px 3px 5px 5px #ccc;
 	cursor: pointer;
-}
-
-.core-img-name-sm{
-    padding-top:7px;
-    font-size:14px;
-}
-
-.core-img-name-xs{
-    padding-top:8px;
-    font-size:13px;
-}
-
-.delta_canova{
-    background:
-        url(../img/canova.jpg) no-repeat center;
 }
 
 #rush{
