@@ -330,172 +330,165 @@
   </div>
 
 <!-- Eboard
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div id="brothers" class="bg-lightgrey-2 pt4">
-  <div class="container bb-grey pt3 pb4">
-    <div class="row">
-      <h2 class="bold center">the Brotherhood</h2>
-    </div>
-    <div class="row">
-      <div class="w-50 mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                <path d="M1.5,1 L50.3364601,1" id="Line" stroke="#E03B3B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"/>
-            </g>
-        </svg>
-      </div>
-    </div>
-    <div class="row mb2 mt2">
-      <h6 class="decorated">Eboard</h6>
-    </div>
-    <div class"row">
-
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-    
-      <div class="two p-columns sublabel">
-        <img src="img/photo.png"></img>
-        <h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-        <p class="caption">Marketing Chair</p>
-      </div>
-
-    </div>
-  </div>
+	<div class="container bb-grey pt3 pb4">
+		<div class="row">
+			<h2 class="bold center">the Brotherhood</h2>
+		</div>
+		<div class="row">
+			<div class="w-50 mx-auto">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
+					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+						<path d="M1.5,1 L50.3364601,1" id="Line" stroke="#E03B3B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"/>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<div class="row mb2 mt2">
+			<h6 style="clear:both" class="decorated">Core Eboard</h6>
+		</div>
+		<div class"row">
+			<?php
+				if( ( $h = fopen( $site_path."/core.csv", "r" ) ) !== FALSE )
+						{
+							$row = fgetcsv( $h, 0, "\n" );
+							$eboard = [];
+							
+							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+							{
+								$row = explode( ",", $row[0] );
+								$FN = str_replace( " ", "", $row[0] );
+								$LN = str_replace( " ", "", $row[1] );
+								$Position = $row[2];
+								$bio = $row[3];
+								$eboard[ $Position ] = [
+									"full_name" => $FN." ".$LN,
+									"bio" => $bio
+								];
+							}
+						}
+						
+						foreach( $eboard as $position => $data )
+						{
+							$strName = $data[ "full_name" ];
+							$Name = str_replace( " ", "_", $data["full_name"] );
+			?>
+				<div class="four columns sublabel offset-by-two">
+					<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+					<p class="caption"><?php echo $position ?></p>
+				</div>   
+			<?php
+				};
+			?>
+		</div>
+		<div class="row mb2 mt2">
+			<h6 style="clear:both" class="decorated">Semester Eboard</h6>
+		</div>
+		<div class"row">
+			<?php
+				if( ( $h = fopen( $site_path."/semester.csv", "r" ) ) !== FALSE )
+						{
+							$row = fgetcsv( $h, 0, "\n" );
+							$eboard = [];
+							
+							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+							{
+								$row = explode( ",", $row[0] );
+								$FN = str_replace( " ", "", $row[0] );
+								$LN = str_replace( " ", "", $row[1] );
+								$Position = $row[2];
+								$bio = $row[3];
+								$eboard[ $Position ] = [
+									"full_name" => $FN." ".$LN,
+									"bio" => $bio
+								];
+							}
+						}
+						
+						$count = 0;
+						
+						foreach( $eboard as $position => $data )
+						{
+							$count = $count + 1;
+							$strName = $data[ "full_name" ];
+							$Name = str_replace( " ", "_", $data["full_name"] );
+			?>
+				<div class="three columns sublabel">
+					<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+					<p class="caption"><?php echo $position ?></p>
+				</div>   
+			<?php
+					if( ( $count % 4 ) == 0 )
+					{
+						echo '</div><div class="row">';
+					}
+				};
+			?>
+		</div>
+	</div>
 </div>
 <!-- Brothers
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container bb-grey pt4 pb8">
-    <div class="row">
-      <div class="three columns">
-        <h6 class="decorated">Delta</h6>
+		<?php
+			if( ( $h = fopen( $site_path."/brothers.csv", "r" ) ) !== FALSE )
+			{
+				$row = fgetcsv( $h, 0, "\n" );
+				$brother_info = [];
+				
+				while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+				{
+					$row = explode( ",", $row[0] );
+					$FN = $row[0];
+					$LN = $row[1];
+					$Class = $row[2];
+					$bio = $row[3];
+					$brother_info[ $Class ][] = [
+						"full_name" => $FN." ".$LN,
+						"bio" => $bio
+					];
+				}
+			}
+			
+			// Show each pledge class in their own section.
+			Foreach( $brother_info as $class_name => $pledge_class )
+			{
+		?>
+		<div class="row">
+      <div class="two columns">
+        <h6 class="decorated"><?php echo $class_name ?></h6>
       </div>
-      <div class="nine columns">
-        <div class="row">
-
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
+      <div class="ten columns">
+		<div class="row">
+        	<?php					
+				$counter = 1;
+				Foreach( $pledge_class as $data )
+				{
+					$strName = $data[ "full_name" ];
+					$Name = str_replace( " ", "_", $data["full_name"] );
+			?>
+          <div class="two columns">
+            <img src="<?php echo $site_path."/img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>">
+            <h6 class="h7 decorated-2 mt1 mb2"><?php echo $strName ?></h6>
           </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-        
-          <div class="two p-columns">
-            <img src="img/photo.png"></img>
-            <h6 class="h7 decorated-2 mt1 mb2">Andrew Aquino</h6>
-          </div>
-
+			<?php
+					if( ($counter % 6) == 0 )
+					{
+						echo '</div><div class="row">';
+					}
+					$counter++;
+				};
+				// Completed a pledge class!!!
+			?>
         </div>
       </div>
+	  </div>
+	  <?php
+		};
+	  ?>
     </div>
   </div>
 
