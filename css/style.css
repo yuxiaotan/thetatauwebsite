@@ -1,4 +1,3 @@
-
 body{
   color: #222222;
 }
@@ -59,7 +58,7 @@ p{
 .bg-black{ background-color:#222; }
 .bg-white{ background-color:white; }
 .bg-red{background-color: #d24040;}
-.bg-header{background: url(../images/header.png);}
+.bg-header{background: url(../img/header.png);}
 
 .white{color:white;}
 
@@ -155,10 +154,15 @@ p{
   margin-bottom: -1px;
 }
  
-
 img {
   max-width: 100%;
   height: auto; 
+}
+
+img.avatar {
+	height:150px;
+	border-radius: 50%;
+	max-width: 200px;
 }
 
 @media (min-width: 320px) {
@@ -301,6 +305,10 @@ input[type="button"].button-outline {
 }
 
 /* Navigation Menu - Background */
+.link{
+	cursor: pointer;
+}
+
 .navigation {
   width: 100%;
   height: 100%;
@@ -425,6 +433,12 @@ p{
   color: #333;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.decorated-3{
+	color: #C0C0C0;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .copy{
