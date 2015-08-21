@@ -21,6 +21,8 @@
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/dropzone.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
@@ -67,11 +69,16 @@
   <div class="bg-black regular">
     <div class="container pt2 pb2 nav-desktop">
       <div class="row">
-        <a href=''>Contact</a>
-        <a href=''>Brothers</a>
-        <a href=''>Portfolio</a>
-        <a href=''>About</a>
-        <a href=''>Apply</a>
+		<div class="four columns">
+			<img class="menu-item" src="img/red.tt.logo.png"/>
+		</div>
+		<div class="eight columns">
+			<a class="menu-item" href=''>Contact</a>
+			<a class="menu-item" href=''>Brothers</a>
+			<a class="menu-item" href=''>Portfolio</a>
+			<a class="menu-item" href=''>About</a>
+			<a class="menu-item" href=''>Apply</a>
+		</div>
       </div>
     </div>
   </div>
@@ -145,7 +152,7 @@
     </div>
     <div class="row mx-auto">
 	
-    <div class="two columns pt2 pb0">
+    <div class="center two columns pt2 pb0">
 		<img src="img/ttcrest.png"></img>
 		<!--
 			<h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
@@ -288,45 +295,20 @@
                 </g>
             </svg>
         </div>
-
-        <div class="row pt3">
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-          <div class="two q-columns b-grey">
-            <img  src="img/company.png"/>
-          </div>
-        </div>
+		<div class="row">
+		<?php
+			$count = 1;
+			$dir = "img/employers";
+			$employers = glob( $dir."/*.png" );
+			
+			foreach( $employers as $employer )
+			{			
+		?>
+		<img class="employer-logo" src="<?php echo $employer; ?>"/>
+		<?php 
+			}
+		?>
+		</div>
   </div>
 
 <!-- Eboard
@@ -375,10 +357,12 @@
 							$Name = str_replace( " ", "_", $data["full_name"] );
 			?>
 				<div class="four columns sublabel offset-by-two">
-					<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+						<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					</div>
 					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 					<p class="caption"><?php echo $position ?></p>
-				</div>   
+				</div>  
 			<?php
 				};
 			?>
@@ -416,7 +400,9 @@
 							$Name = str_replace( " ", "_", $data["full_name"] );
 			?>
 				<div class="three columns sublabel">
-					<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+						<img src="<?php echo "img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>"/>
+					</div>
 					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 					<p class="caption"><?php echo $position ?></p>
 				</div>   
@@ -471,8 +457,10 @@
 					$Name = str_replace( " ", "_", $data["full_name"] );
 			?>
           <div class="two columns">
-            <img src="<?php echo $site_path."/img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>">
-            <h6 class="h7 decorated-2 mt1 mb2"><?php echo $strName ?></h6>
+			<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
+				<img src="<?php echo $site_path."/img/brothers-small/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>">
+            </div>
+			<h6 class="h7 decorated-2 mt1 mb2"><?php echo $strName ?></h6>
           </div>
 			<?php
 					if( ($counter % 6) == 0 )
@@ -521,7 +509,142 @@
 </div>
 
 <!-- End Document
+Begin Modal Stuff
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<?php
+if( ( $h = fopen( $site_path."/core.csv", "r" ) ) !== FALSE )
+{
+	$row = fgetcsv( $h, 0, "\n" );
+	$eboard = [];
+	
+	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+	{
+		$row = explode( ",", $row[0] );
+		$FN = str_replace( " ", "", $row[0] );
+		$LN = str_replace( " ", "", $row[1] );
+		$Position = $row[2];
+		$bio = $row[3];
+		$eboard[ $Position ] = [
+			"full_name" => $FN." ".$LN,
+			"bio" => $bio
+		];
+	}
+}
+
+if( ( $h = fopen( $site_path."/semester.csv", "r" ) ) !== FALSE )
+{
+	$row = fgetcsv( $h, 0, "\n" );
+	
+	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+	{
+		$row = explode( ",", $row[0] );
+		$FN = str_replace( " ", "", $row[0] );
+		$LN = str_replace( " ", "", $row[1] );
+		$Position = $row[2];
+		$bio = $row[3];
+		$eboard[ $Position ] = [
+			"full_name" => $FN." ".$LN,
+			"bio" => $bio
+		];
+	}
+}
+
+foreach( $eboard as $position => $data )
+{
+	$strName = $data[ "full_name" ];
+	$Name = str_replace( " ", "_", $data["full_name"] );
+?>
+
+<!-- MODAL STUFF -->
+<div class="modal fade" name="<?php echo $position."_".$Name ?>">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<div class="modal-title"><?php echo $strName." - ".$position ?></div>
+			</div>
+
+			<div class="modal-body">
+				<div class="row">
+					<div class="four columns">
+						<img src="<?php echo $site_path."/img/brothers-large/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>">
+					</div>
+					<div class="eight columns modal-body-text">
+						<?php
+							echo "<p>".$data["bio"]."</p>";
+						?>
+					</div>
+				</div>
+
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>	
+<?php
+};
+?>
+
+<?php
+	if( ( $h = fopen( $site_path."/brothers.csv", "r" ) ) !== FALSE )
+	{
+		$row = fgetcsv( $h, 0, "\n" );
+		$brother_info = [];
+		
+		while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+		{
+			$row = explode( ",", $row[0] );
+			$FN = $row[0];
+			$LN = $row[1];
+			$Class = $row[2];
+			$bio = $row[3];
+			$brother_info[ $Class ][] = [
+				"full_name" => $FN." ".$LN,
+				"bio" => $bio
+			];
+		}
+	}
+	
+	// Show each pledge class in their own section.
+	Foreach( $brother_info as $class_name => $pledge_class )
+	{			
+		$counter = 1;
+		Foreach( $pledge_class as $data )
+		{
+			$strName = $data[ "full_name" ];
+			$Name = str_replace( " ", "_", $data["full_name"] );
+	?>
+		<!-- MODAL STUFF -->
+		<div class="modal fade" name="<?php echo $class_name."_".$Name ?>">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="modal-title"><?php echo $strName." - ".$class_name ?></div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="four columns">
+								<img src="<?php echo $site_path."/img/brothers-large/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".jpg"; ?>" alt="<?php echo $strName; ?>">
+							</div>
+							<div class="eight columns modal-body-text">
+								<?php
+									echo "<p>".$data["bio"]."</p>";
+								?>
+							</div>
+						</div>
+
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+<?php
+	}
+}
+	// Completed showing all brothers!!!
+?>
+<!-- End Brothers Section -->
 </body>
 
 <script>
@@ -584,6 +707,9 @@
 		});
 	});
 </script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
 </html>
 

@@ -2,6 +2,14 @@ body{
   color: #222222;
 }
 
+img.menu-item{
+	height:3em;
+}
+
+a.menu-item{
+	padding: 1em;
+}
+
 /*Typography*/
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +53,22 @@ p{
 .bold{font-weight:600;}
 .regular{font-weight:400 !important;}
 .light{font-weight:100;}
+
+/*Modal Styling*/
+.modal-title{
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	letter-spacing: .15px;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.modal-body img{
+	border-radius: 6px;
+}
 
 /*Color Utility Classes*/
 .bb-grey{border-bottom: solid 1px #F2F2F2;}
@@ -340,6 +364,7 @@ input[type="button"].button-outline {
   font-weight:400;
   color: #ccc;
   text-decoration: inherit;
+  cursor: pointer;
 }
 
 .nav-item a:hover {
@@ -572,11 +597,15 @@ p{
   margin-left:-1px;
   margin-bottom: -1px;
 }
- 
 
 img {
   max-width: 100%;
   height: auto; 
+}
+
+img.employer-logo{
+	height:50px;
+	margin:15px;
 }
 
 @media (min-width: 320px) {
