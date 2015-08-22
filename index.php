@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-		<?php $site_path = "http://localhost/ThetaTauWebsite" ?>
-		
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
 		<!-- Basic Page Needs
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<meta charset="utf-8">
@@ -332,7 +329,7 @@
 		</div>
 		<div class"row">
 			<?php
-				if( ( $h = fopen( $site_path."/core.csv", "r" ) ) !== FALSE )
+				if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 						{
 							$row = fgetcsv( $h, 0, "\n" );
 							$eboard = [];
@@ -358,7 +355,7 @@
 			?>
 				<div class="four columns sublabel offset-by-two">
 					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
-						<img src="<?php echo "img/brothers/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".png"; ?>" alt="<?php echo $strName; ?>"/>
+						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
 					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 					<p class="caption"><?php echo $position ?></p>
@@ -372,7 +369,7 @@
 		</div>
 		<div class"row">
 			<?php
-				if( ( $h = fopen( $site_path."/semester.csv", "r" ) ) !== FALSE )
+				if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 						{
 							$row = fgetcsv( $h, 0, "\n" );
 							$eboard = [];
@@ -401,7 +398,7 @@
 			?>
 				<div class="three columns sublabel">
 					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
-						<img src="<?php echo "img/brothers/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".png"; ?>" alt="<?php echo $strName; ?>"/>
+						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
 					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 					<p class="caption"><?php echo $position ?></p>
@@ -420,7 +417,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container bb-grey pt4 pb8">
 		<?php
-			if( ( $h = fopen( $site_path."/brothers.csv", "r" ) ) !== FALSE )
+			if( ( $h = fopen( "brothers.csv", "r" ) ) !== FALSE )
 			{
 				$row = fgetcsv( $h, 0, "\n" );
 				$brother_info = [];
@@ -458,7 +455,7 @@
 			?>
           <div class="two columns">
 			<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
-				<img src="<?php echo $site_path."/img/brothers/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".png"; ?>" alt="<?php echo $strName; ?>">
+				<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
             </div>
 			<h6 class="h7 decorated-2 mt1 mb2"><?php echo $strName ?></h6>
           </div>
@@ -539,7 +536,7 @@ if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 	}
 }
 
-if( ( $h = fopen( $site_path."/semester.csv", "r" ) ) !== FALSE )
+if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 {
 	$row = fgetcsv( $h, 0, "\n" );
 	
@@ -577,7 +574,7 @@ foreach( $eboard as $position => $data )
 			<div class="modal-body">
 				<div class="row">
 					<div class="four columns">
-						<img src="<?php echo $site_path."/img/brothers/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".png"; ?>" alt="<?php echo $strName; ?>">
+						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
 					</div>
 					<div class="eight columns modal-body-text">
 						<?php
@@ -595,7 +592,7 @@ foreach( $eboard as $position => $data )
 ?>
 
 <?php
-	if( ( $h = fopen( $site_path."/brothers.csv", "r" ) ) !== FALSE )
+	if( ( $h = fopen( "brothers.csv", "r" ) ) !== FALSE )
 	{
 		$row = fgetcsv( $h, 0, "\n" );
 		$brother_info = [];
@@ -635,7 +632,7 @@ foreach( $eboard as $position => $data )
 					<div class="modal-body">
 						<div class="row">
 							<div class="four columns">
-								<img src="<?php echo $site_path."/img/brothers/".$Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ).".png"; ?>" alt="<?php echo $strName; ?>">
+								<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
 							</div>
 							<div class="eight columns modal-body-text">
 								<?php
