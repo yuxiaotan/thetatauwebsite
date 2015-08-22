@@ -70,6 +70,10 @@ p{
 	border-radius: 6px;
 }
 
+.modal-body p{
+	margin-bottom:15px;
+}
+
 /*Color Utility Classes*/
 .bb-grey{border-bottom: solid 1px #F2F2F2;}
 .bb-darkgrey{border-bottom: solid 1px #DDDDDD;}

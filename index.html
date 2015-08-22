@@ -339,7 +339,7 @@
 							
 							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 							{
-								$row = explode( ",", $row[0] );
+								$row = explode( "|", $row[0] );
 								$FN = str_replace( " ", "", $row[0] );
 								$LN = str_replace( " ", "", $row[1] );
 								$Position = $row[2];
@@ -379,7 +379,7 @@
 							
 							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 							{
-								$row = explode( ",", $row[0] );
+								$row = explode( "|", $row[0] );
 								$FN = str_replace( " ", "", $row[0] );
 								$LN = str_replace( " ", "", $row[1] );
 								$Position = $row[2];
@@ -427,7 +427,7 @@
 				
 				while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 				{
-					$row = explode( ",", $row[0] );
+					$row = explode( "|", $row[0] );
 					$FN = $row[0];
 					$LN = $row[1];
 					$Class = $row[2];
@@ -482,30 +482,37 @@
 
 <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="contact" class="row bg-black pt4 pb4">
-  <!-- Contact Us
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container pt2 h7">
-      <div class="row footer">
-        <div class="row">
-        <div class="eight columns">
-          <h6 class="h7 decorated-2 white mb3">Contact</h6>
-        </div>
-        <div class="row">
-          <div class="six columns">
-          <p class="grey lh2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, purus sit amet hendrerit consectetur, urna velit blandit odio, nec venenatis metus sem non tellus. Nam mattis lorem eget nisi accumsan consequat.</p>
-          <h6 class="copy mb0 regular h7 grey left decorated-2">© 2015 Theta Tau Cornell </h6>
-          </div>
-          <div class="three columns right">
-            <p class="grey lh2">Andrew Aquino<br>516.754.4145<br><a href="#">aja255@cornell.edu</a></p>
-          </div>
-          <div class="three columns right">
-            <p class="grey lh2">Andrew Aquino<br>516.754.4145<br><a href="#">aja255@cornell.edu</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div id="contact" class="row bg-black pt4 pb4">
+	<!-- Contact Us
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container pt2 h7">
+		<div class="row footer">
+			<div class="row">
+				<div class="two columns offset-by-two">
+					<h6 class="h7 decorated-2 white mb3">Contact</h6>
+				</div>
+				<div class="six columns">
+					<div class="row">
+						<div class="six columns">
+							<p class="grey lh2">Jonya Chen<br>Regent<br><a href="#">[netid]@cornell.edu</a></p>
+							<p class="grey lh2">Adrian Wu<br>Treasurer<br><a href="#">[netid]@cornell.edu</a></p>
+						</div>
+						<div class="six columns">
+							<p class="grey lh2">Yuxiao Tan<br>Vice Regent<br><a href="#">[netid]@cornell.edu</a></p>
+							<p class="grey lh2">Kelsey Evans<br>Scribe<br><a href="#">[netid]@cornell.edu</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="eight columns offset-by-two">
+						<!--<p class="grey lh2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, purus sit amet hendrerit consectetur, urna velit blandit odio, nec venenatis metus sem non tellus. Nam mattis lorem eget nisi accumsan consequat.</p>-->
+						<h6 class="copy mb0 regular h7 grey left decorated-2">© 2015 Theta Tau Cornell<br/>by Andrew Aquino, Brandon Hartz, Varun Hegde, Valerie Hu, Yuxiao Tan</h6>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- End Document
@@ -513,14 +520,14 @@ Begin Modal Stuff
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
 <?php
-if( ( $h = fopen( $site_path."/core.csv", "r" ) ) !== FALSE )
+if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 {
 	$row = fgetcsv( $h, 0, "\n" );
 	$eboard = [];
 	
 	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 	{
-		$row = explode( ",", $row[0] );
+		$row = explode( "|", $row[0] );
 		$FN = str_replace( " ", "", $row[0] );
 		$LN = str_replace( " ", "", $row[1] );
 		$Position = $row[2];
@@ -538,11 +545,12 @@ if( ( $h = fopen( $site_path."/semester.csv", "r" ) ) !== FALSE )
 	
 	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 	{
-		$row = explode( ",", $row[0] );
+		$row = explode( "|", $row[0] );
 		$FN = str_replace( " ", "", $row[0] );
 		$LN = str_replace( " ", "", $row[1] );
 		$Position = $row[2];
 		$bio = $row[3];
+			
 		$eboard[ $Position ] = [
 			"full_name" => $FN." ".$LN,
 			"bio" => $bio
@@ -554,6 +562,7 @@ foreach( $eboard as $position => $data )
 {
 	$strName = $data[ "full_name" ];
 	$Name = str_replace( " ", "_", $data["full_name"] );
+	$bio = $data["bio"];
 ?>
 
 <!-- MODAL STUFF -->
@@ -572,7 +581,7 @@ foreach( $eboard as $position => $data )
 					</div>
 					<div class="eight columns modal-body-text">
 						<?php
-							echo "<p>".$data["bio"]."</p>";
+							echo "<p>".$bio."</p>";
 						?>
 					</div>
 				</div>
@@ -593,7 +602,7 @@ foreach( $eboard as $position => $data )
 		
 		while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 		{
-			$row = explode( ",", $row[0] );
+			$row = explode( "|", $row[0] );
 			$FN = $row[0];
 			$LN = $row[1];
 			$Class = $row[2];
