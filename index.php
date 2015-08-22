@@ -20,12 +20,10 @@
 		<link rel="stylesheet" href="css/dropzone.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
+		
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
-		<script src="js/dropzone.js"></script>
-		<script src="js/jquery.easing.min.js"></script>
-
+	
 		<!-- Favicon
 		–––––––––––––––––––––––––––––s––––––––––––––––––––– -->
 		<link rel="icon" type="image/png" href="img/favicon.ico">
@@ -716,6 +714,5 @@ foreach( $eboard as $position => $data )
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-
 </html>
 
