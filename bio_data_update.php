@@ -7,6 +7,7 @@
 		if( isset( $_POST["bio"] ) )
 		{
 			$bio = str_replace( "\n", "</p><p>", $_POST["bio"] );
+			
 			$brothers = file_get_contents( "brothers.csv" );
 			$row_start = stripos( $brothers, $FN."|".$LN );
 			if( $row_start > stripos( $brothers, "\n" ) )
@@ -21,7 +22,7 @@
 			$row_start = stripos( $core, $FN."|".$LN );
 			if( $row_start > stripos( $core, "\n" ) )
 			{
-				$last_field = stripos( $brothers, "|", 1 + stripos( $brothers, "|", $row_start + strlen($FN."|".$LN) ) );
+				$last_field = stripos( $core, "|", 1 + stripos( $core, "|", $row_start + strlen($FN."|".$LN) ) );
 				$row_end = stripos( $core, "\n", $row_start );			
 				$core_new = substr( $core, 0, $last_field + 1 ).$bio.substr( $core, $row_end - 1 );
 				file_put_contents( "core.csv", $core_new );
@@ -31,7 +32,7 @@
 			$row_start = stripos( $semester, $FN."|".$LN );
 			if( $row_start > stripos( $semester, "\n" ) )
 			{
-				$last_field = stripos( $brothers, "|", 1 + stripos( $brothers, "|", $row_start + strlen($FN."|".$LN) ) );
+				$last_field = stripos( $semester, "|", 1 + stripos( $semester, "|", $row_start + strlen($FN."|".$LN) ) );
 				$row_end = stripos( $semester, "\n", $row_start );
 				$semester_new = substr( $semester, 0, $last_field + 1 ).$bio.substr( $semester, $row_end - 1 );				
 				file_put_contents( "semester.csv", $semester_new );
@@ -40,8 +41,8 @@
 
 		if( isset( $_FILES["pic"] ) )
 		{
-			$imgpath = "img/brothers";
-			$imgname = $FN[0].$LN.".png";
+			$imgpath = "img/brothers/";
+			$imgname = strtolower($FN[0].$LN.".png");
 			$imgtemp = $_FILES["pic"]["tmp_name"];
 			
 			move_uploaded_file( $imgtemp, $imgpath.$imgname );

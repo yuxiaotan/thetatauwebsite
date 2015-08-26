@@ -38,12 +38,12 @@
 
 
 <ul class="navigation mobile">
-    <li class="nav-item"><a id="nav-home" >Home</a></li>
-    <li class="nav-item"><a id="nav-apply">Apply</a></li>
-    <li class="nav-item"><a id="nav-about-us">About</a></li>
-    <li class="nav-item"><a id="nav-portfolio">Portfolio</a></li>
-    <li class="nav-item"><a id="nav-brothers">Brothers</a></li>
-    <li class="nav-item"><a id="nav-contact">Contact</a></li>
+    <li class="nav-item"><a class="nav-home" >Home</a></li>
+    <li class="nav-item"><a class="nav-apply">Apply</a></li>
+    <li class="nav-item"><a class="nav-about-us">About</a></li>
+    <li class="nav-item"><a class="nav-portfolio">Portfolio</a></li>
+    <li class="nav-item"><a class="nav-brothers">Brothers</a></li>
+    <li class="nav-item"><a class="nav-contact">Contact</a></li>
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger mobile" />
@@ -60,7 +60,7 @@
 </label>
 
 <div class="site-wrap">
-
+	<a href="#" class="go-top bg-black">Back to top</a>
   <div class="bg-black regular">
     <div class="container pt2 pb2 nav-desktop">
       <div class="row">
@@ -68,11 +68,11 @@
 			<img class="menu-item" src="img/red.tt.logo.png"/>
 		</div>
 		<div class="eight columns">
-			<a class="menu-item" href=''>Contact</a>
-			<a class="menu-item" href=''>Brothers</a>
-			<a class="menu-item" href=''>Portfolio</a>
-			<a class="menu-item" href=''>About</a>
-			<a class="menu-item" href=''>Apply</a>
+			<a class="link menu-item nav-contact">Contact</a>
+			<a class="link menu-item nav-brothers">Brothers</a>
+			<a class="link menu-item nav-portfolio">Portfolio</a>
+			<a class="link menu-item nav-about-us">About</a>
+			<a class="link menu-item nav-apply">Apply</a>
 		</div>
       </div>
     </div>
@@ -350,13 +350,21 @@
 						{
 							$strName = $data[ "full_name" ];
 							$Name = str_replace( " ", "_", $data["full_name"] );
+							
+							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+							$img_path = "img/brothers/".$img_name.".png";
+							
+							if( !file_exists( $img_path ) )
+							{
+								$img_path = "img/brothers/noshow.png";
+							}
 			?>
 				<div class="four columns sublabel offset-by-two">
 					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
-						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>"/>
+						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
-					<p class="caption"><?php echo $position ?></p>
+					<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+					<p class="center caption"><?php echo $position ?></p>
 				</div>  
 			<?php
 				};
@@ -393,13 +401,21 @@
 							$count = $count + 1;
 							$strName = $data[ "full_name" ];
 							$Name = str_replace( " ", "_", $data["full_name"] );
+							
+							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+							$img_path = "img/brothers/".$img_name.".png";
+							
+							if( !file_exists( $img_path ) )
+							{
+								$img_path = "img/brothers/noshow.png";
+							}
 			?>
 				<div class="three columns sublabel">
 					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
-						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>"/>
+						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<h6 class="h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
-					<p class="caption"><?php echo $position ?></p>
+					<h6 class="center h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+					<p class="center caption"><?php echo $position ?></p>
 				</div>   
 			<?php
 					if( ( $count % 4 ) == 0 )
@@ -450,12 +466,20 @@
 				{
 					$strName = $data[ "full_name" ];
 					$Name = str_replace( " ", "_", $data["full_name"] );
+					
+					$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+					$img_path = "img/brothers/".$img_name.".png";
+					
+					if( !file_exists( $img_path ) )
+					{
+						$img_path = "img/brothers/noshow.png";
+					}
 			?>
           <div class="two columns">
 			<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
-				<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
+				<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
             </div>
-			<h6 class="h7 decorated-2 mt1 mb2"><?php echo $strName ?></h6>
+			<h6 class="h7 center decorated-2 mt1 mb2"><?php echo $strName ?></h6>
           </div>
 			<?php
 					if( ($counter % 6) == 0 )
@@ -558,6 +582,14 @@ foreach( $eboard as $position => $data )
 	$strName = $data[ "full_name" ];
 	$Name = str_replace( " ", "_", $data["full_name"] );
 	$bio = $data["bio"];
+	
+	$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+	$img_path = "img/brothers/".$img_name.".png";
+	
+	if( !file_exists( $img_path ) )
+	{
+		$img_path = "img/brothers/noshow.png";
+	}
 ?>
 
 <!-- MODAL STUFF -->
@@ -572,7 +604,7 @@ foreach( $eboard as $position => $data )
 			<div class="modal-body">
 				<div class="row">
 					<div class="four columns">
-						<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
+						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
 					</div>
 					<div class="eight columns modal-body-text">
 						<?php
@@ -617,6 +649,13 @@ foreach( $eboard as $position => $data )
 		{
 			$strName = $data[ "full_name" ];
 			$Name = str_replace( " ", "_", $data["full_name"] );
+			$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+			$img_path = "img/brothers/".$img_name.".png";
+			
+			if( !file_exists( $img_path ) )
+			{
+				$img_path = "img/brothers/noshow.png";
+			}
 	?>
 		<!-- MODAL STUFF -->
 		<div class="modal fade" name="<?php echo $class_name."_".$Name ?>">
@@ -630,7 +669,7 @@ foreach( $eboard as $position => $data )
 					<div class="modal-body">
 						<div class="row">
 							<div class="four columns">
-								<img src="<?php echo "img/brothers/".strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) )).".png"; ?>" alt="<?php echo $strName; ?>">
+								<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
 							</div>
 							<div class="eight columns modal-body-text">
 								<?php
@@ -674,41 +713,48 @@ foreach( $eboard as $position => $data )
 			$("#brotherhood").slideDown();
 		});
 		
-		$("#nav-home").click(function() {
+		$(".nav-home").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#home").offset().top
 			}, 1000);
 		});
 		
-		$("#nav-apply").click(function() {
+		$(".nav-apply").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#apply").offset().top
 			}, 1000);
 		});
 		
-		$("#nav-about-us").click(function() {
+		$(".nav-about-us").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#about-us").offset().top
 			}, 1000);
 		});
 		
-		$("#nav-portfolio").click(function() {
+		$(".nav-portfolio").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#portfolio").offset().top
 			}, 1000);
 		});
 		
-		$("#nav-brothers").click(function() {
+		$(".nav-brothers").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#brothers").offset().top
 			}, 1000);
 		});
 		
-		$("#nav-contact").click(function() {
+		$(".nav-contact").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#contact").offset().top
 			}, 1000);
 		});
+
+		// Animate the scroll to top
+		$('.go-top').click(function(event) {
+			event.preventDefault();
+
+			$('html, body').animate({scrollTop: 0}, 300);
+		})
 	});
 </script>
 
