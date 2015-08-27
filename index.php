@@ -23,6 +23,7 @@
 		
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
+		<script src="js/custom.js"></script>
 	
 		<!-- Favicon
 		–––––––––––––––––––––––––––––s––––––––––––––––––––– -->
@@ -94,6 +95,7 @@
       <div class="twelve columns">
         <div class="row mx-auto">
             <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
+            <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more</p>
         </div>
 
         <form>
@@ -107,10 +109,12 @@
 			</div>
 
 			<div class="row mx-auto">
-			  <input type="file" accept=".pdf,.docx,.doc" required />
+			  <input class="seven columns"type="file" accept=".pdf,.docx,.doc" required />
+			  <p class="caption five columns right">Resume</p>
 			</div>
 			<div class="row mx-auto">
-			  <input type="file" accept="image/*" required />
+			  <input class="seven columns" type="file" accept="image/*" required />
+  			  <p class="caption five columns right">Headshot</p>
 			</div>
 			</div>
 
@@ -172,7 +176,6 @@
 <div id="what-we-do" class="bg-black">
 	<div class="container pt6 pb6 pl2 pr2">
 		<div class="row">
-			<h6 class="decorated center">Our Story</h6>
 			<h2 class="bold offwhite center">What we do</h2>
 		</div>
 		<div class="row mb2">
@@ -191,14 +194,7 @@
 				<button id="btn-professionalism" class="button button-outline four columns">Professionalism</button>
 			</div>
 		</div>
-		<div id="philanthropy">
-			<div class="row">
-				<div class="two column center">
-					<img class="avatar" src="img/brothers/smantravadi.png"></img>
-					<h6 class="h7 decorated-3 mb0 mt1 ">Sahitya Mantravadi</h6>
-					<p class="caption ">Philanthropy Chair</p>
-				</div>
-			</div>    
+		<div id="philanthropy">   
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -215,19 +211,14 @@
 					</p>
 				</div>
 			</div>
-		</div>
-		<div id="brotherhood">
-			<div class="row center">
-				<div class="six columns">
-					<img class="avatar" src="img/brothers/tfamighetti.png"></img>
-					<h6 class="h7 decorated-3 mb0 mt1 ">TJ Famighetti</h6>
-					<p class="caption ">Social Chair</p>
-				</div><div class="six columns">
-					<img class="avatar" src="img/brothers/rnason.png"></img>
-					<h6 class="h7 decorated-3 mb0 mt1 ">Robyn Nason</h6>
-					<p class="caption ">Social Chair</p>
+			<div class="row">
+				<div class="two column center">
+					<h6 class="h7 decorated-3 mb0 mt1 ">Sahitya Mantravadi</h6>
+					<p class="caption ">Philanthropy Chair</p>
 				</div>
-			</div>    
+			</div> 
+		</div>
+		<div id="brotherhood">  
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -246,15 +237,17 @@
 					</p>
 				</div>
 			</div>
-		</div>
-		<div id="professionalism">
-			<div class="row">
-				<div class="two column center">
-					<img class="avatar" src="img/brothers/jye.png"></img>
-					<h6 class="h7 decorated-3 mb0 mt1 ">Jean Ye</h6>
-					<p class="caption ">Professional Development Chair</p>
+			<div class="row center">
+				<div class="six columns">
+					<h6 class="h7 decorated-3 mb0 mt1 ">TJ Famighetti</h6>
+					<p class="caption ">Social Chair</p>
+				</div><div class="six columns">
+					<h6 class="h7 decorated-3 mb0 mt1 ">Robyn Nason</h6>
+					<p class="caption ">Social Chair</p>
 				</div>
-			</div>    
+			</div>  
+		</div>
+		<div id="professionalism"> 
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -271,6 +264,12 @@
 					</p>
 				</div>
 			</div>
+			<div class="row">
+				<div class="two column center">
+					<h6 class="h7 decorated-3 mb0 mt1 ">Jean Ye</h6>
+					<p class="caption ">Professional Development Chair</p>
+				</div>
+			</div>   
 		</div>
 	</div>
 </div>
@@ -279,7 +278,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="portfolio" class="container bb-grey pt8 pb12">
         <div class="row">
-          <h6 class="decorated">Folio</h6>
+          <h6 class="decorated">Portfolio</h6>
           <h2 class="bold">We've been to great places</h2>
         </div>
 
@@ -299,7 +298,9 @@
 			foreach( $employers as $employer )
 			{			
 		?>
-		<img class="employer-logo" src="<?php echo $employer; ?>"/>
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
+							<img class="employer-logo vertical-align" src="<?php echo $employer; ?>"/>
+				</div>  
 		<?php 
 			}
 		?>
@@ -311,9 +312,10 @@
 <div id="brothers" class="bg-lightgrey-2 pt4">
 	<div class="container bb-grey pt3 pb4">
 		<div class="row">
-			<h2 class="bold center">the Brotherhood</h2>
+			<h2 class="bold center">Brotherhood</h2>
 		</div>
-		<div class="row">
+
+		<div class="row mb3">
 			<div class="w-50 mx-auto">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1">
 					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -322,10 +324,9 @@
 				</svg>
 			</div>
 		</div>
-		<div class="row mb2 mt2">
-			<h6 style="clear:both" class="decorated">Core Eboard</h6>
-		</div>
-		<div class"row">
+
+		<h6 class="decorated mt2">Eboard</h6>
+
 			<?php
 				if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 						{
@@ -359,21 +360,20 @@
 								$img_path = "img/brothers/noshow.png";
 							}
 			?>
-				<div class="four columns sublabel offset-by-two">
-					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
-					<p class="center caption"><?php echo $position ?></p>
+					<div class="h110 h110-eboard">
+						<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+						<p class="center caption"><?php echo $position ?></p>
+					</div>
 				</div>  
 			<?php
 				};
 			?>
-		</div>
-		<div class="row mb2 mt2">
-			<h6 style="clear:both" class="decorated">Semester Eboard</h6>
-		</div>
-		<div class"row">
+			<br class="clear"/>
+			<h6 class="decorated mt2">Semesterly Eboard</h6>
 			<?php
 				if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 						{
@@ -410,21 +410,23 @@
 								$img_path = "img/brothers/noshow.png";
 							}
 			?>
-				<div class="three columns sublabel">
-					<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+
+
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<h6 class="center h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
-					<p class="center caption"><?php echo $position ?></p>
-				</div>   
+					<div class="h110 h110-eboard">
+						<h6 class="center h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+						<p class="center caption"><?php echo $position ?></p>
+					</div>
+				</div> 
+
 			<?php
-					if( ( $count % 4 ) == 0 )
-					{
-						echo '</div><div class="row">';
-					}
+
 				};
 			?>
-		</div>
+			<br class="clear"/>
 	</div>
 </div>
 <!-- Brothers
@@ -459,7 +461,7 @@
         <h6 class="decorated"><?php echo $class_name ?></h6>
       </div>
       <div class="ten columns">
-		<div class="row">
+
         	<?php					
 				$counter = 1;
 				Foreach( $pledge_class as $data )
@@ -475,22 +477,20 @@
 						$img_path = "img/brothers/noshow.png";
 					}
 			?>
-          <div class="two columns">
-			<div style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
+          <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small blocks">
+			<div class="h195"style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
 				<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
             </div>
-			<h6 class="h7 center decorated-2 mt1 mb2"><?php echo $strName ?></h6>
+            <div class="h110">
+				<h6 class="h7 center decorated-2 mt1 mb2"><?php echo $strName ?></h6><br>
+			</div>
           </div>
 			<?php
-					if( ($counter % 6) == 0 )
-					{
-						echo '</div><div class="row">';
-					}
 					$counter++;
 				};
 				// Completed a pledge class!!!
 			?>
-        </div>
+			<br class="clear"/>
       </div>
 	  </div>
 	  <?php
@@ -507,23 +507,27 @@
 	<div class="container pt2 h7">
 		<div class="row footer">
 			<div class="row">
-				<div class="two columns offset-by-two">
+				<div class="two columns ">
 					<h6 class="h7 decorated-2 white mb3">Contact</h6>
 				</div>
-				<div class="six columns">
+				<div class="ten columns">
 					<div class="row">
-						<div class="six columns">
+						<div class="three columns">
 							<p class="grey lh2">Jonya Chen<br>Regent<br><a href="#">jc957@cornell.edu</a></p>
+						</div>
+						<div class="three columns">
 							<p class="grey lh2">Adrian Wu<br>Treasurer<br><a href="#">acw82@cornell.edu</a></p>
 						</div>
-						<div class="six columns">
+						<div class="three columns">
 							<p class="grey lh2">Yuxiao Tan<br>Vice Regent<br><a href="#">yt358@cornell.edu</a></p>
+						</div>
+						<div class="three columns">
 							<p class="grey lh2">Kelsey Evans<br>Scribe<br><a href="#">kee37@cornell.edu</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="row">	
-					<div class="eight columns offset-by-two">
+					<div class="eight columns offset-by-two mt2">
 						<!--<p class="grey lh2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, purus sit amet hendrerit consectetur, urna velit blandit odio, nec venenatis metus sem non tellus. Nam mattis lorem eget nisi accumsan consequat.</p>-->
 						<h6 class="copy mb0 regular h7 grey left decorated-2">© 2015 Theta Tau Cornell<br/>by Andrew Aquino, Brandon Hartz, Varun Hegde, Valerie Hu, Yuxiao Tan</h6>
 					</div>
