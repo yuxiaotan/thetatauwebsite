@@ -360,7 +360,7 @@
 								$img_path = "img/brothers/noshow.png";
 							}
 			?>
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
 					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
@@ -412,7 +412,7 @@
 			?>
 
 
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
 					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
