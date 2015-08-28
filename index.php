@@ -98,12 +98,12 @@
             <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more</p>
         </div>
 
-<form class="jotform-form" action="http://submit.jotform.us/submit/50131533303135/" method="post" enctype="multipart/form-data" name="form_50131533303135" id="50131533303135" accept-charset="utf-8" novalidate="true">
-<input type="hidden" name="formID" value="50131533303135">
+<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
+<input type="hidden" name="formID" value="52391084313147">
 
 
 
-              <input type="hidden" id="simple_spc" name="simple_spc" value="50131533303135-50131533303135">
+              <input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
 			<div class="row mx-auto">
 				<input type="text" class="input-app u-full-width" placeholder="Full Name"></input>
 			</div>
