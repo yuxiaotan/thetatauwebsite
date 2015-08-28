@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<!-- Basic Page Needs
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<meta charset="utf-8">
@@ -20,11 +20,11 @@
 		<link rel="stylesheet" href="css/dropzone.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-		
+
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
 		<script src="js/custom.js"></script>
-	
+
 		<!-- Favicon
 		–––––––––––––––––––––––––––––s––––––––––––––––––––– -->
 		<link rel="icon" type="image/png" href="img/favicon.ico">
@@ -93,6 +93,7 @@
   <div id="apply" class="container w-640 bg-lightgrey-2 bb-grey pt4 pb3 pl2 pr2 block stagger1">
     <div class="row w-320 mx-auto">
       <div class="twelve columns">
+<script type="text/javascript" src="http://form.jotform.us/jsform/52391084313147"></script>
         <div class="row mx-auto">
             <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
             <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more</p>
@@ -121,7 +122,7 @@
 			<div class="row mx-auto mt1">
 				<button class="button button-primary mx-auto block">Apply</button>
 			</div>
-       
+
         </form>
 
     </div>
@@ -150,7 +151,7 @@
       </div>
     </div>
     <div class="row mx-auto">
-	
+
     <div class="center two columns pt2 pb0">
 		<img src="img/ttcrest.png"></img>
 		<!--
@@ -158,7 +159,7 @@
 			<p class="caption">Marketing Chair</p>
 		-->
     </div>
-	
+
     <div class="one column pb2"></div>
     <div class="nine columns pt2 pb6">
       <div class="row">
@@ -194,7 +195,7 @@
 				<button id="btn-professionalism" class="button button-outline four columns">Professionalism</button>
 			</div>
 		</div>
-		<div id="philanthropy">   
+		<div id="philanthropy">
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -216,9 +217,9 @@
 					<h6 class="h7 decorated-3 mb0 mt1 ">Sahitya Mantravadi</h6>
 					<p class="caption ">Philanthropy Chair</p>
 				</div>
-			</div> 
+			</div>
 		</div>
-		<div id="brotherhood">  
+		<div id="brotherhood">
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -245,9 +246,9 @@
 					<h6 class="h7 decorated-3 mb0 mt1 ">Robyn Nason</h6>
 					<p class="caption ">Social Chair</p>
 				</div>
-			</div>  
+			</div>
 		</div>
-		<div id="professionalism"> 
+		<div id="professionalism">
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
@@ -269,7 +270,7 @@
 					<h6 class="h7 decorated-3 mb0 mt1 ">Jean Ye</h6>
 					<p class="caption ">Professional Development Chair</p>
 				</div>
-			</div>   
+			</div>
 		</div>
 	</div>
 </div>
@@ -294,14 +295,14 @@
 			$count = 1;
 			$dir = "img/employers";
 			$employers = glob( $dir."/*.png" );
-			
+
 			foreach( $employers as $employer )
-			{			
+			{
 		?>
 				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
 							<img class="employer-logo vertical-align" src="<?php echo $employer; ?>"/>
-				</div>  
-		<?php 
+				</div>
+		<?php
 			}
 		?>
 		</div>
@@ -332,7 +333,7 @@
 						{
 							$row = fgetcsv( $h, 0, "\n" );
 							$eboard = [];
-							
+
 							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 							{
 								$row = explode( "|", $row[0] );
@@ -346,15 +347,15 @@
 								];
 							}
 						}
-						
+
 						foreach( $eboard as $position => $data )
 						{
 							$strName = $data[ "full_name" ];
 							$Name = str_replace( " ", "_", $data["full_name"] );
-							
+
 							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 							$img_path = "img/brothers/".$img_name.".png";
-							
+
 							if( !file_exists( $img_path ) )
 							{
 								$img_path = "img/brothers/noshow.png";
@@ -368,7 +369,7 @@
 						<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 						<p class="center caption"><?php echo $position ?></p>
 					</div>
-				</div>  
+				</div>
 			<?php
 				};
 			?>
@@ -379,7 +380,7 @@
 						{
 							$row = fgetcsv( $h, 0, "\n" );
 							$eboard = [];
-							
+
 							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 							{
 								$row = explode( "|", $row[0] );
@@ -393,18 +394,18 @@
 								];
 							}
 						}
-						
+
 						$count = 0;
-						
+
 						foreach( $eboard as $position => $data )
 						{
 							$count = $count + 1;
 							$strName = $data[ "full_name" ];
 							$Name = str_replace( " ", "_", $data["full_name"] );
-							
+
 							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 							$img_path = "img/brothers/".$img_name.".png";
-							
+
 							if( !file_exists( $img_path ) )
 							{
 								$img_path = "img/brothers/noshow.png";
@@ -420,7 +421,7 @@
 						<h6 class="center h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 						<p class="center caption"><?php echo $position ?></p>
 					</div>
-				</div> 
+				</div>
 
 			<?php
 
@@ -437,7 +438,7 @@
 			{
 				$row = fgetcsv( $h, 0, "\n" );
 				$brother_info = [];
-				
+
 				while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 				{
 					$row = explode( "|", $row[0] );
@@ -451,7 +452,7 @@
 					];
 				}
 			}
-			
+
 			// Show each pledge class in their own section.
 			Foreach( $brother_info as $class_name => $pledge_class )
 			{
@@ -462,16 +463,16 @@
       </div>
       <div class="ten columns">
 
-        	<?php					
+        	<?php
 				$counter = 1;
 				Foreach( $pledge_class as $data )
 				{
 					$strName = $data[ "full_name" ];
 					$Name = str_replace( " ", "_", $data["full_name"] );
-					
+
 					$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 					$img_path = "img/brothers/".$img_name.".png";
-					
+
 					if( !file_exists( $img_path ) )
 					{
 						$img_path = "img/brothers/noshow.png";
@@ -526,13 +527,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">	
+				<div class="row">
 					<div class="eight columns offset-by-two mt2">
 						<!--<p class="grey lh2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, purus sit amet hendrerit consectetur, urna velit blandit odio, nec venenatis metus sem non tellus. Nam mattis lorem eget nisi accumsan consequat.</p>-->
 						<h6 class="copy mb0 regular h7 grey left decorated-2">© 2015 Theta Tau Cornell<br/>by Andrew Aquino, Brandon Hartz, Varun Hegde, Valerie Hu, Yuxiao Tan</h6>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
@@ -541,13 +542,13 @@
 <!-- End Document
 Begin Modal Stuff
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
+
 <?php
 if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 {
 	$row = fgetcsv( $h, 0, "\n" );
 	$eboard = [];
-	
+
 	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 	{
 		$row = explode( "|", $row[0] );
@@ -565,7 +566,7 @@ if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
 if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 {
 	$row = fgetcsv( $h, 0, "\n" );
-	
+
 	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 	{
 		$row = explode( "|", $row[0] );
@@ -573,7 +574,7 @@ if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 		$LN = str_replace( " ", "", $row[1] );
 		$Position = $row[2];
 		$bio = $row[3];
-			
+
 		$eboard[ $Position ] = [
 			"full_name" => $FN." ".$LN,
 			"bio" => $bio
@@ -586,10 +587,10 @@ foreach( $eboard as $position => $data )
 	$strName = $data[ "full_name" ];
 	$Name = str_replace( " ", "_", $data["full_name"] );
 	$bio = $data["bio"];
-	
+
 	$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 	$img_path = "img/brothers/".$img_name.".png";
-	
+
 	if( !file_exists( $img_path ) )
 	{
 		$img_path = "img/brothers/noshow.png";
@@ -620,7 +621,7 @@ foreach( $eboard as $position => $data )
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div>	
+</div>
 <?php
 };
 ?>
@@ -630,7 +631,7 @@ foreach( $eboard as $position => $data )
 	{
 		$row = fgetcsv( $h, 0, "\n" );
 		$brother_info = [];
-		
+
 		while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 		{
 			$row = explode( "|", $row[0] );
@@ -644,10 +645,10 @@ foreach( $eboard as $position => $data )
 			];
 		}
 	}
-	
+
 	// Show each pledge class in their own section.
 	Foreach( $brother_info as $class_name => $pledge_class )
-	{			
+	{
 		$counter = 1;
 		Foreach( $pledge_class as $data )
 		{
@@ -655,7 +656,7 @@ foreach( $eboard as $position => $data )
 			$Name = str_replace( " ", "_", $data["full_name"] );
 			$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 			$img_path = "img/brothers/".$img_name.".png";
-			
+
 			if( !file_exists( $img_path ) )
 			{
 				$img_path = "img/brothers/noshow.png";
@@ -698,55 +699,55 @@ foreach( $eboard as $position => $data )
 	$(document).ready(function() {
 		$("#professionalism").hide();
 		$("#brotherhood").hide();
-		
+
 		$("#btn-professionalism").click(function() {
 			$("#brotherhood").hide();
 			$("#philanthropy").hide();
 			$("#professionalism").slideDown();
 		});
-		
+
 		$("#btn-philanthropy").click(function() {
 			$("#brotherhood").hide();
 			$("#professionalism").hide();
 			$("#philanthropy").slideDown();
 		});
-		
+
 		$("#btn-brotherhood").click(function() {
 			$("#philanthropy").hide();
 			$("#professionalism").hide();
 			$("#brotherhood").slideDown();
 		});
-		
+
 		$(".nav-home").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#home").offset().top
 			}, 1000);
 		});
-		
+
 		$(".nav-apply").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#apply").offset().top
 			}, 1000);
 		});
-		
+
 		$(".nav-about-us").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#about-us").offset().top
 			}, 1000);
 		});
-		
+
 		$(".nav-portfolio").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#portfolio").offset().top
 			}, 1000);
 		});
-		
+
 		$(".nav-brothers").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#brothers").offset().top
 			}, 1000);
 		});
-		
+
 		$(".nav-contact").click(function() {
 			$('html, body').animate({
 				scrollTop: $("#contact").offset().top
