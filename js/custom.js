@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
      $el,
      topPosition = 0;
 
-	 $('.block').delay(1200).each(function() {
+	 $('.blocks').delay(1200).each(function() {
 
 	   console.log("its working");
 	   $el = $(this);

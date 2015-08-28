@@ -184,6 +184,8 @@ p{
 .pr0{padding-right: 0em !important;}
 .pr1{padding-right: .8em;}
 .pr2{padding-right: 1.6em;}
+.pr3{padding-right: 2.4em;}
+.pr4{padding-right: 3.2em;}
 
 .center{text-align: center;}
 .right{text-align: right;}
@@ -293,6 +295,7 @@ select.contact {
 
 .input-app{
   font-weight: 400;
+  background-color: white !important;
   color: #333333 !important;
   border: 1px solid  #d8d8d8 !important;
   -webkit-transition: all 0.2s ease;
@@ -575,7 +578,7 @@ p{
 .mr3{margin-right:2.4em;}
 .mr4{margin-right:3.2em;}
 
-.mb0{margin-bottom: 0em;}
+.mb0{margin-bottom: 0em !important;}
 .mb1{margin-bottom:.8em;}
 .mb2{margin-bottom:1.6em;}
 .mb3{margin-bottom:2.4em;}

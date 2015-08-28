@@ -90,44 +90,56 @@
 
 <!-- Apply Now
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="apply" class="container w-640 bg-lightgrey-2 bb-grey pt4 pb3 pl2 pr2 block stagger1">
-    <div class="row w-320 mx-auto">
-      <div class="twelve columns">
-        <div class="row mx-auto">
-            <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
-            <p class="caption">1. Must be a sophomore or a first semester junior <br> 2. GPA of 2.5 or more <br> 3. Information Session is strongly recommended.</p>
-        </div>
+  <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
+    <div class="row mx-auto">
+	    <div class="six columns pb3 pt3 pl3 pr3"> 
+			  <div class="row mx-auto bb-grey mb3">
+			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
+			      <h6 class="mb0">Information Session 1</h6>
+			      <p class="caption"> September 3 | 7:00PM - 9:00PM | Olin 155 </p>
+			      <h6 class="mb0">Information Session 1</h6>
+			      <p class="caption"> September 8 | 7:00PM - 9:00PM | Olin 255 </p>
+			  </div>
+			  <div class="row mx-auto mb0">
+			      <p class="h7 regular grey caption mb0 ">1. Sophomores and First Semester Juniors only</p>
+			      <p class="h7 regular grey caption mb0 ">2. GPA of 2.5 or higher</p>
+			      <p class="h7 regular grey caption mb0 ">3. Information Session is strongly recommended.</p>
+			  </div>
+	    </div>
 
-<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
-<input type="hidden" name="formID" value="52391084313147">
 
+			<div class="six columns pl3 pb3 pt3 pr3">
 
+				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
+					<input type="hidden" name="formID" value="52391084313147">
+					<input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
+					
+					<div class="row mx-auto">
+						<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
+					</div>
 
-              <input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
-			<div class="row mx-auto">
-				<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
+					<div class="row mx-auto">
+						<input type="email" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
+					</div>
+
+					<div class="row mb0">
+				  	<p class="caption five columns mb0">Resume</p>
+				  </div>
+					<div class="row mx-auto">
+					  <input class=" form-control seven columns mb2"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
+					</div>
+					
+				  <div class="row"><p class="caption five columns mb0">Headshot</p></div>
+					<div class="row mx-auto">
+				    <input class=" form-control seven columns mb2" type="file" accept="image/*" name="q6_headshot" required />
+					</div>
+
+				<div class="row mx-auto mt1">
+					<button class="button button-primary mx-auto block">Apply</button>
+				</div>
+      	</form>
+
 			</div>
-
-			<div class="row mx-auto">
-				<input type="email" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
-			</div>
-
-			<div class="row mx-auto">
-			  <input class=" form-control seven columns"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
-			  <p class="caption five columns right">Resume</p>
-			</div>
-			<div class="row mx-auto">
-        <input class=" form-control seven columns" type="file" accept="image/*" name="q6_headshot" required />
-  			  <p class="caption five columns right">Headshot</p>
-			</div>
-			</div>
-
-			<div class="row mx-auto mt1">
-				<button class="button button-primary mx-auto block">Apply</button>
-			</div>
-
-        </form>
-
     </div>
   </div>
 
