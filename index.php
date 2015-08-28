@@ -105,7 +105,7 @@
 
               <input type="hidden" id="simple_spc" name="simple_spc" value="50131533303135-50131533303135">
 			<div class="row mx-auto">
-				<input type="email" class="input-app u-full-width" placeholder="Full Name"></input>
+				<input type="text" class="input-app u-full-width" placeholder="Full Name"></input>
 			</div>
 
 			<div class="row mx-auto">
