@@ -92,7 +92,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
     <div class="row mx-auto">
-	    <div class="six columns pb3 pt3 pl3 pr3"> 
+	    <div class="six columns pb3 pt3 pl3 pr3">
 			  <div class="row mx-auto bb-grey mb3">
 			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
 			      <h6 class="mb0">Information Session 1</h6>
@@ -104,6 +104,7 @@
 			      <p class="h7 regular grey caption mb0 ">1. Sophomores and First Semester Juniors only</p>
 			      <p class="h7 regular grey caption mb0 ">2. GPA of 2.5 or higher</p>
 			      <p class="h7 regular grey caption mb0 ">3. Information Session is strongly recommended.</p>
+			      <p class="h7 regular black caption mb0 ">4. Include your GPA on your resume.</p>
 			  </div>
 	    </div>
 
@@ -113,7 +114,7 @@
 				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
 					<input type="hidden" name="formID" value="52391084313147">
 					<input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
-					
+
 					<div class="row mx-auto">
 						<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
 					</div>
@@ -128,7 +129,7 @@
 					<div class="row mx-auto">
 					  <input class=" form-control seven columns mb2"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
 					</div>
-					
+
 				  <div class="row"><p class="caption five columns mb0">Headshot</p></div>
 					<div class="row mx-auto">
 				    <input class=" form-control seven columns mb2" type="file" accept="image/*" name="q6_headshot" required />
