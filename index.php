@@ -95,7 +95,7 @@
       <div class="twelve columns">
         <div class="row mx-auto">
             <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
-            <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more</p>
+            <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more <br> 3. Information Session is strongly recommended.</p>
         </div>
 
         <form>
@@ -456,7 +456,7 @@
 			Foreach( $brother_info as $class_name => $pledge_class )
 			{
 		?>
-		<div class="row">
+	<div class="row">
       <div class="two columns">
         <h6 class="decorated"><?php echo $class_name ?></h6>
       </div>
@@ -497,7 +497,6 @@
 		};
 	  ?>
     </div>
-  </div>
 
 <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -537,6 +536,8 @@
 		</div>
 	</div>
 </div>
+  </div>
+
 
 <!-- End Document
 Begin Modal Stuff
