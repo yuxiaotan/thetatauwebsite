@@ -1207,20 +1207,20 @@ label.myLabel input[type="file"] {
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 500px) {
-    .h110{
-    height: 100px;
+@media (min-width: 550px) {
+  .h110{
+    height: 160px;
   }
 
   .h195{
-    height: 210px;
+    height: 150px;
   }
   .h110-eboard{
-    height: 100px !important;
+    height: 150px !important;
   }
 
   .h195-eboard{
-    height: 210px !important;
+    height: 170px !important;
   }
 }
 
@@ -1232,7 +1232,7 @@ label.myLabel input[type="file"] {
   }
 
   .h195{
-    height: 140px;
+    height: 180px;
   }
 
 }
@@ -1240,7 +1240,7 @@ label.myLabel input[type="file"] {
 /* Larger than desktop */
 @media (min-width: 1000px) {
   .h110{
-    height: 100px;
+    height: 120px;
   }
 
   .h195{
