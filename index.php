@@ -302,7 +302,7 @@
 			foreach( $employers as $employer )
 			{
 		?>
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
+				<div class="col sm-col sm-col-3 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
 							<img class="employer-logo vertical-align" src="<?php echo $employer; ?>"/>
 				</div>
 		<?php
