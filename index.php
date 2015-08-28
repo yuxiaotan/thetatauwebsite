@@ -93,14 +93,17 @@
   <div id="apply" class="container w-640 bg-lightgrey-2 bb-grey pt4 pb3 pl2 pr2 block stagger1">
     <div class="row w-320 mx-auto">
       <div class="twelve columns">
-<script type="text/javascript" src="http://form.jotform.us/jsform/52391084313147"></script>
         <div class="row mx-auto">
             <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
             <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more</p>
         </div>
 
-        <form>
+<form class="jotform-form" action="http://submit.jotform.us/submit/50131533303135/" method="post" enctype="multipart/form-data" name="form_50131533303135" id="50131533303135" accept-charset="utf-8" novalidate="true">
+<input type="hidden" name="formID" value="50131533303135">
 
+
+
+              <input type="hidden" id="simple_spc" name="simple_spc" value="50131533303135-50131533303135">
 			<div class="row mx-auto">
 				<input type="email" class="input-app u-full-width" placeholder="Full Name"></input>
 			</div>
