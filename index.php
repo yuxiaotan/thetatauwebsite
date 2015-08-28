@@ -95,7 +95,7 @@
       <div class="twelve columns">
         <div class="row mx-auto">
             <h6 class="decorated-2 center mb3 ">Fall Rush Application</h6>
-            <p class="caption">1. Must be a sophomore or a first semester juniors <br> 2. GPA of 2.5 or more <br> 3. Information Session is strongly recommended.</p>
+            <p class="caption">1. Must be a sophomore or a first semester junior <br> 2. GPA of 2.5 or more <br> 3. Information Session is strongly recommended.</p>
         </div>
 
 <form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
