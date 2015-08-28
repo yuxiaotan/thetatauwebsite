@@ -105,19 +105,19 @@
 
               <input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
 			<div class="row mx-auto">
-				<input type="text" class="input-app u-full-width" placeholder="Full Name"></input>
+				<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
 			</div>
 
 			<div class="row mx-auto">
-				<input type="email" class="input-app u-full-width" placeholder="Email Address"></input>
+				<input type="email" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
 			</div>
 
 			<div class="row mx-auto">
-			  <input class="seven columns"type="file" accept=".pdf,.docx,.doc" required />
+			  <input class=" form-control seven columns"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
 			  <p class="caption five columns right">Resume</p>
 			</div>
 			<div class="row mx-auto">
-			  <input class="seven columns" type="file" accept="image/*" required />
+        <input class=" form-control seven columns" type="file" accept="image/*" name="q6_headshot" required />
   			  <p class="caption five columns right">Headshot</p>
 			</div>
 			</div>
