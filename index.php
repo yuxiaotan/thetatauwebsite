@@ -409,6 +409,11 @@
 							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 							$img_path = "img/brothers/".$img_name.".png";
 
+              if( !file_exists( $img_path ) )
+              {
+							  $img_path = "img/brothers/".$img_name.".jpg";
+              }
+
 							if( !file_exists( $img_path ) )
 							{
 								$img_path = "img/brothers/noshow.png";
