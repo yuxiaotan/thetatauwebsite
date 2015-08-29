@@ -107,7 +107,7 @@
 			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
 			      <h6 class="mb0">Information Session 1</h6>
 			      <p class="caption"> September 3 | 7:00PM - 9:00PM | Olin 155 </p>
-			      <h6 class="mb0">Information Session 1</h6>
+			      <h6 class="mb0">Information Session 2</h6>
 			      <p class="caption"> September 8 | 7:00PM - 9:00PM | Olin 255 </p>
 			  </div>
 			  <div class="row mx-auto mb0">
