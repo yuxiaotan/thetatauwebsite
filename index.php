@@ -104,7 +104,7 @@
 			      <p class="h7 regular grey caption mb0 ">1. Sophomores and First Semester Juniors only</p>
 			      <p class="h7 regular grey caption mb0 ">2. GPA of 2.5 or higher</p>
 			      <p class="h7 regular grey caption mb0 ">3. Information Session is strongly recommended.</p>
-			      <p class="h7 regular black caption mb0 ">4. Include your GPA on your resume.</p>
+			      <p class="h6 regular grey caption mb0 ">4. Include your GPA on your resume.</p>
 			  </div>
 	    </div>
 
