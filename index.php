@@ -34,6 +34,38 @@
       ga('send', 'pageview');
 
     </script>
+    <script>
+      function validateForm(){
+      var form = document.forms["form_52391084313147"];
+      var name = form["input_1"].value;
+      var email = form["input_2"].value;
+      var resume = form["input_3"].value;
+      var headshot = form["input_4"].value;
+
+      if(name == null || name == ""){
+          alert("Name is Missing");
+          return false;
+      }
+
+      if(email == null || email == ""){
+          alert("Email is Missing");
+          return false;
+      }
+
+      if(resume == null || resume == ""){
+          alert("Resume is Missing");
+          return false;
+      }
+
+      if(headshot == null || headshot == ""){
+          alert("Headshot is Missing");
+          return false;
+      }
+      return true;
+      }
+
+    </script>
+
 
 		<!-- Favicon
 		–––––––––––––––––––––––––––––s––––––––––––––––––––– -->
@@ -121,28 +153,28 @@
 
 			<div class="six columns pl3 pb3 pt3 pr3">
 
-				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
+				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true" onsubmit="return validateForm()">
 					<input type="hidden" name="formID" value="52391084313147">
 					<input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
 
 					<div class="row mx-auto">
-						<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
+						<input type="text" id="input_1" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
 					</div>
 
 					<div class="row mx-auto">
-						<input type="email" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
+						<input type="email" id="input_2" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
 					</div>
 
 					<div class="row mb0">
 				  	<p class="caption five columns mb0">Resume</p>
 				  </div>
 					<div class="row mx-auto">
-					  <input class=" form-control seven columns mb2"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
+					  <input class=" form-control seven columns mb2" id="input_3" type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
 					</div>
 
 				  <div class="row"><p class="caption five columns mb0">Headshot</p></div>
 					<div class="row mx-auto">
-				    <input class=" form-control seven columns mb2" type="file" accept="image/*" name="q6_headshot" required />
+				    <input class=" form-control seven columns mb2" id="input_4" type="file" accept="image/*" name="q6_headshot" required />
 					</div>
 
 				<div class="row mx-auto mt1">
