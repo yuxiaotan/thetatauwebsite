@@ -24,6 +24,48 @@
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
 		<script src="js/custom.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58563247-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script>
+      function validateForm(){
+      var form = document.forms["form_52391084313147"];
+      var name = form["input_1"].value;
+      var email = form["input_2"].value;
+      var resume = form["input_3"].value;
+      var headshot = form["input_4"].value;
+
+      if(name == null || name == ""){
+          alert("Name is Missing");
+          return false;
+      }
+
+      if(email == null || email == ""){
+          alert("Email is Missing");
+          return false;
+      }
+
+      if(resume == null || resume == ""){
+          alert("Resume is Missing");
+          return false;
+      }
+
+      if(headshot == null || headshot == ""){
+          alert("Headshot is Missing");
+          return false;
+      }
+      return true;
+      }
+
+    </script>
+
 
 		<!-- Favicon
 		–––––––––––––––––––––––––––––s––––––––––––––––––––– -->
@@ -92,46 +134,47 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
     <div class="row mx-auto">
-	    <div class="six columns pb3 pt3 pl3 pr3"> 
+	    <div class="six columns pb3 pt3 pl3 pr3">
 			  <div class="row mx-auto bb-grey mb3">
 			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
 			      <h6 class="mb0">Information Session 1</h6>
 			      <p class="caption"> September 3 | 7:00PM - 9:00PM | Olin 155 </p>
-			      <h6 class="mb0">Information Session 1</h6>
+			      <h6 class="mb0">Information Session 2</h6>
 			      <p class="caption"> September 8 | 7:00PM - 9:00PM | Olin 255 </p>
 			  </div>
 			  <div class="row mx-auto mb0">
 			      <p class="h7 regular grey caption mb0 ">1. Sophomores and First Semester Juniors only</p>
 			      <p class="h7 regular grey caption mb0 ">2. GPA of 2.5 or higher</p>
 			      <p class="h7 regular grey caption mb0 ">3. Information Session is strongly recommended.</p>
+			      <p class="h6 regular grey caption mb0 ">4. Include your GPA on your resume.</p>
 			  </div>
 	    </div>
 
 
 			<div class="six columns pl3 pb3 pt3 pr3">
 
-				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true">
+				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true" onsubmit="return validateForm()">
 					<input type="hidden" name="formID" value="52391084313147">
 					<input type="hidden" id="simple_spc" name="simple_spc" value="52391084313147-52391084313147">
-					
+
 					<div class="row mx-auto">
-						<input type="text" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
+						<input type="text" id="input_1" class="form-control input-app u-full-width" placeholder="Full Name" name="q7_fullName"></input>
 					</div>
 
 					<div class="row mx-auto">
-						<input type="email" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
+						<input type="email" id="input_2" class="form-control input-app u-full-width" placeholder="Email Address" name="q3_email3"></input>
 					</div>
 
 					<div class="row mb0">
 				  	<p class="caption five columns mb0">Resume</p>
 				  </div>
 					<div class="row mx-auto">
-					  <input class=" form-control seven columns mb2"type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
+					  <input class=" form-control seven columns mb2" id="input_3" type="file" accept=".pdf,.docx,.doc" name="q4_resume"required />
 					</div>
-					
+
 				  <div class="row"><p class="caption five columns mb0">Headshot</p></div>
 					<div class="row mx-auto">
-				    <input class=" form-control seven columns mb2" type="file" accept="image/*" name="q6_headshot" required />
+				    <input class=" form-control seven columns mb2" id="input_4" type="file" accept="image/*" name="q6_headshot" required />
 					</div>
 
 				<div class="row mx-auto mt1">
@@ -492,6 +535,11 @@
 
 					$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
 					$img_path = "img/brothers/".$img_name.".png";
+
+          if( !file_exists( $img_path ) )
+          {
+            $img_path = "img/brothers/".$img_name.".jpg";
+          }
 
 					if( !file_exists( $img_path ) )
 					{
