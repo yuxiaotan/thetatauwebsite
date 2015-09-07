@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p{
   font-family: "Domine";
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: .15px;
 }
 
@@ -67,29 +67,16 @@ p{
   font-style: italic;
 }
 
+.overlay{
+  background: rgba(70, 72, 82, 0.2);
+}
+
+
+
 .bold{font-weight:600;}
 .regular{font-weight:400 !important;}
 .light{font-weight:100;}
 
-/*Modal Styling*/
-.modal-title{
-	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1.3em;
-	letter-spacing: .15px;
-	color: #333;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: .1em;
-	text-align: center;
-}
-
-.modal-body img{
-	border-radius: 6px;
-}
-
-.modal-body p{
-	margin-bottom:15px;
-}
 
 /*Color Utility Classes*/
 .bb-grey{border-bottom: solid 1px #F2F2F2;}
@@ -121,6 +108,7 @@ p{
 .va-bottom{vertical-align: bottom;}
 .float-left{float:left;}
 .float-right{float:right;}
+.float-none{float:none;}
 .block{display:block;}
 .mx-auto{
   margin-left:auto !important;
@@ -146,6 +134,11 @@ p{
 .mt1{margin-top:.8em;}
 .mt2{margin-top:1.6em;}
 .mt3{margin-top:2.4em;}
+.mt6{margin-top:4.8em;}
+.mt12{margin-top:9.6em;}
+.mt36{margin-top:37.8em;}
+
+.ml0{margin-left: 0em !important;}
 
 .mr0{margin-right: 0em !important;}
 .mr1{margin-right:.8em;}
@@ -163,8 +156,8 @@ p{
 .pt2{padding-top:1.6em;}
 .pt3{padding-top:2.4em;}
 .pt4{padding-top:3.2em;}
-.pt6{padding-top:5.8em;}
-.pt8{padding-top: 6.4em;}
+.pt6{padding-top:5.8em !important;}
+.pt8{padding-top: 6.4em !important;}
 .pt12{padding-top: 9.6em;}
 
 .pb1{padding-bottom: .8em;}
@@ -186,6 +179,10 @@ p{
 .pr2{padding-right: 1.6em;}
 .pr3{padding-right: 2.4em;}
 .pr4{padding-right: 3.2em;}
+
+.p3{padding: 3rem !important;}
+.p4{padding: 4rem !important;}
+.p5{padding: 5rem !important;}
 
 .center{text-align: center;}
 .right{text-align: right;}
@@ -381,7 +378,7 @@ input[type="button"].button-outline {
 
 .nav-item{
   width:200px;
-  padding-left: .8em;
+  padding-left: 1.6em;
   padding-bottom:.8em;
   margin-bottom: .8em;
 }
@@ -468,12 +465,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .h7{
   font-size: 1.2rem;
-}
-
-p{
-  font-family: "Domine";
-  font-size: 1.3em;
-  letter-spacing: .15px;
 }
 
 .decorated{
@@ -775,12 +766,6 @@ input[type="button"].button-outline{
   list-style-type: none;
 }
 
-.nav-item{
-  width:200px;
-  padding-left: .8em;
-  padding-bottom:.8em;
-  margin-bottom: .8em;
-}
 
 .nav-item a{
   text-transform:uppercase;
@@ -1199,31 +1184,178 @@ label.myLabel input[type="file"] {
   height: 190px;
 }
 
-@media (min-width: 0px) {
+
+@media (min-width: 0px){
+    /*Modal Styling*/
+  .modal-header .caption{
+    margin-bottom: 0;
+  }
+  .modal-body p{
+    margin-bottom:15px;
+  }
+
+  .modal-dialog{
+    width: 500px;
+  }
+  .modal-body p{
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      font-family: sans-serif;
+  }
+
+  .modal-content{
+    height: 300px;
+    overflow-y:scroll;
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    box-shadow:  0 0 0 rgba(0,0,0,0) !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  #desktop{
+    display:none;
+  }
+
+  #mobile{
+    display:block;
+  }
+}
+
+  .scroll{
+    overflow-y:scroll;
+  }
+
+@media (min-width: 550px){
+    /*Modal Styling*/
+  .modal-header .caption{
+    margin-bottom: 0;
+  }
+  .modal-body p{
+    margin-bottom:15px;
+  }
+
+  .width-50p{
+    width: 50% !important; 
+  }
+
+  .modal-content{
+    height: 400px;
+    overflow-y:none;
+  }
+
+  .modal-dialog{
+    width: 500px;
+  }
+  .modal-body p{
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      font-family: sans-serif;
+  }
+
+  .modal-content{
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    box-shadow:  0 0 0 rgba(0,0,0,0) !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  #mobile{
+    display:none;
+  }
+
+  #desktop{
+    display:block;
+  }
+
+
+}
+
+@media (min-width: 300px) {
   .h110{
-    height: 60px;
+    height: 75px;
   }
 
   .h195{
+    height: 140px;
+  }
+  .h110-eboard{
+    height: 150px;
+  }
+
+  .h195-eboard{
+    height: 140px;
+  }
+}
+
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 370px) {
+  .h110{
+    height: 75px;
+  }
+
+  .h195{
+    height: 165px;
+  }
+  .h110-eboard{
+    height: 120px;
+  }
+
+  .h195-eboard{
     height: 170px;
   }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
+@media (min-width: 450px) {
   .h110{
-    height: 160px;
+    height: 75px;
   }
 
   .h195{
-    height: 150px;
+    height: 230px;
   }
   .h110-eboard{
-    height: 150px !important;
+    height: 120px;
   }
 
   .h195-eboard{
-    height: 170px !important;
+    height: 230px;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 550px) {
+  .h110{
+    height: 75px;
+  }
+
+  .h195{
+    height: 115px;
+  }
+  .h110-eboard{
+    height: 100px;
+  }
+
+  .h195-eboard{
+    height: 170px;
+  }
+}
+
+@media (min-width: 650px) {
+  .h110{
+    height: 75px;
+  }
+
+  .h195{
+    height: 115px;
+  }
+  .h110-eboard{
+    height: 100px;
+  }
+
+  .h195-eboard{
+    height: 210px;
   }
 }
 
@@ -1231,11 +1363,11 @@ label.myLabel input[type="file"] {
 @media (min-width: 750px) {
 
   .h110{
-    height: 70px;
+    height: 90px;
   }
 
   .h195{
-    height: 180px;
+    height: 150px;
   }
 
 }
@@ -1243,21 +1375,51 @@ label.myLabel input[type="file"] {
 /* Larger than desktop */
 @media (min-width: 1000px) {
   .h110{
-    height: 120px;
+    height: 50px;
   }
 
   .h195{
-    height: 210px;
+    height: 200px;
   }
 
   .h110-eboard{
-    height: 100px !important;
+    height: 100px;
   }
 
   .h195-eboard{
-    height: 240px !important;
+    height: 240px;
   }
 }
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .h110{
+    height: 80px;
+  }
+
+  .h195{
+    height: 200px;
+  }
+
+  .h110-eboard{
+    height: 100px;
+  }
+
+  .h195-eboard{
+    height: 240px;
+  }
+}
+
+
+button.close {
+    height: auto;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.modal-text-color{
+  color: #222 !important;
+}

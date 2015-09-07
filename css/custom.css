@@ -110,7 +110,7 @@ footer{
 }
 
 .intro-overlay:before{
-    background-color:rgba(255,0,0,0.5);
+    background-color:rgba(255,0,0,0);
 }
 
 .content-section{
@@ -877,4 +877,9 @@ ol, ul{list-style:none;}
     font-style:italic;
     color:black;
     font-weight:600;
+}
+
+.modal-body p{
+    font-size: 1em;
+    font-family: sans-serif;
 }

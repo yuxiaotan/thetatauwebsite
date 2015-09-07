@@ -103,7 +103,6 @@
 </label>
 
 <div class="site-wrap">
-	<a href="#" class="go-top bg-black">Back to top</a>
   <div class="bg-black regular">
     <div class="container pt2 pb2 nav-desktop">
       <div class="row">
@@ -134,7 +133,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
     <div class="row mx-auto">
-	    <div class="six columns pb3 pt3 pl3 pr3">
+	    <div class="six columns p4">
 			  <div class="row mx-auto bb-grey mb3">
 			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
 			      <h6 class="mb0">Information Session 1</h6>
@@ -151,7 +150,7 @@
 	    </div>
 
 
-			<div class="six columns pl3 pb3 pt3 pr3">
+			<div class="six columns p4">
 
 				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true" onsubmit="return validateForm()">
 					<input type="hidden" name="formID" value="52391084313147">
@@ -352,7 +351,7 @@
 			foreach( $employers as $employer )
 			{
 		?>
-				<div class="col sm-col sm-col-3 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
+				<div class="col col-4 sm-col sm-col-4 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
 							<img class="employer-logo vertical-align" src="<?php echo $employer; ?>"/>
 				</div>
 		<?php
@@ -541,7 +540,7 @@
 						$img_path = "img/brothers/noshow.png";
 					}
 			?>
-          <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small blocks">
+          <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small">
 			<div class="h195"style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
 				<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
             </div>
@@ -663,28 +662,75 @@ foreach( $eboard as $position => $data )
 
 <!-- MODAL STUFF -->
 <div class="modal fade" name="<?php echo $position."_".$Name ?>">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-title"><?php echo $strName." - ".$position ?></div>
-			</div>
 
-			<div class="modal-body">
-				<div class="row">
-					<div class="four columns">
-						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
-					</div>
-					<div class="eight columns modal-body-text">
-						<?php
-							echo "<p>".$bio."</p>";
-						?>
-					</div>
-				</div>
+			<div id="mobile">
+				<div class="modal-dialog">
+					<div class="bg-white">
+						<div class="overlay"
+							 style="background: url(<?php echo $img_path; ?>);
+							     	background-size:   cover;              
+									background-repeat: no-repeat;
+									background-position: center 30%; ">
+							<div class="overlay modal-header pb3 pl3 pr3"
+								 >
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h6 class="white h7 decorated-3 mb0 mt12 "><?php echo $strName?></h6>
+								<p class="white caption"><?php echo $position?></p>
+							</div>
+						</div>
 
+						<div class="modal-body p3 modal-content">
+							<div class="row">
+								<div class="eight columns float-none modal-body-text mx-auto">
+									<?php
+										echo "<p>".$data["bio"]."</p>";
+									?>
+								</div>
+							</div>
+
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
 			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
+			
+
+			<div id="desktop">
+				<div class="modal-dialog">
+					<div class="bg-white">
+						<div class="row">
+							<div class="six columns width-50p"
+								 style="background: url(<?php echo $img_path; ?>);
+								     	background-size:   cover;              
+										background-repeat: no-repeat;
+										background-position: center 30%; 
+										height: 550px">
+							</div>
+
+							<div class="six columns modal-body ml0 width-50p p3">
+								<div class="row bb-grey mb2">
+									<div class="eleven columns">
+										<h6 class="modal-text-color decorated-3 mb0"><?php echo $strName?></h6>
+										<p class="caption"><?php echo $position?></p>
+									</div>
+									<div class="one columns">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+								</div>
+								<div class="row modal-content scroll ">
+									<div class="float-none modal-body-text mx-auto">
+										<?php
+											echo "<p>".$data["bio"]."</p>";
+										?>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div>
 </div>
 <?php
 };
@@ -728,28 +774,77 @@ foreach( $eboard as $position => $data )
 	?>
 		<!-- MODAL STUFF -->
 		<div class="modal fade" name="<?php echo $class_name."_".$Name ?>">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div class="modal-title"><?php echo $strName." - ".$class_name ?></div>
-					</div>
 
-					<div class="modal-body">
-						<div class="row">
-							<div class="four columns">
-								<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
-							</div>
-							<div class="eight columns modal-body-text">
-								<?php
-									echo "<p>".$data["bio"]."</p>";
-								?>
+			<div id="mobile">
+				<div class="modal-dialog">
+					<div class="bg-white">
+						<div class="overlay"
+							 style="background: url(<?php echo $img_path; ?>);
+							     	background-size:   cover;              
+									background-repeat: no-repeat;
+									background-position: center 30%; ">
+							<div class="overlay modal-header pb3 pl3 pr3"
+								 >
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h6 class="white h7 decorated-3 mb0 mt12 "><?php echo $strName?></h6>
+								<p class="white caption"><?php echo $class_name ?></p>
 							</div>
 						</div>
 
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
+						<div class="modal-body p3 scroll">
+							<div class="row">
+								<div class="eight columns float-none modal-body-text mx-auto">
+									<?php
+										echo "<p>".$data["bio"]."</p>";
+									?>
+								</div>
+							</div>
+
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div>
+			
+
+			<div id="desktop">
+				<div class="modal-dialog">
+					<div class="bg-white">
+						<div class="row">
+							<div class="six columns width-50p"
+								 style="background: url(<?php echo $img_path; ?>);
+								     	background-size:   cover;              
+										background-repeat: no-repeat;
+										background-position: center 30%; 
+										height: 550px">
+							</div>
+
+							<div class="six columns modal-body ml0 width-50p p3">
+								<div class="row bb-grey mb2">
+									<div class="eleven columns">
+										<h6 class="modal-text-color decorated-3 mb0"><?php echo $strName?></h6>
+										<p class="caption"><?php echo $class_name ?></p>
+									</div>
+									<div class="one columns">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+								</div>
+								<div class="row modal-content scroll ">
+									<div class="float-none modal-body-text mx-auto">
+										<?php
+											echo "<p>".$data["bio"]."</p>";
+										?>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div>
+
+
 		</div>
 <?php
 	}
