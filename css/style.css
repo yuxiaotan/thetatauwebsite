@@ -1370,6 +1370,15 @@ label.myLabel input[type="file"] {
     height: 150px;
   }
 
+
+  .h110-eboard{
+    height: 100px;
+  }
+
+  .h195-eboard{
+    height: 200px;
+  }
+
 }
 
 /* Larger than desktop */
