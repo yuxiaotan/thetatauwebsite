@@ -309,17 +309,12 @@
 		<div id="professionalism">
 			<div class="row mt4">
 				<div class="six columns offwhite">
-					<p>
-						One of the three main pillars of Theta Tau is service, and throughout the year, our brothers look forward to giving back to the Ithaca-Tompkins County community at large.
-					</p><p>
-						Some of the events include Into the Streets, a student-led program that sponsors an enormous annual service event, and Truss Days, an event held by Habitat for Humanity that builds roof trusses for families in need of housing.
+					<p> Professionalism is one of the three main tenants of Theta Tau. We strive to educate new members on key aspects of professionalism in the hopes that all brothers of Theta Tau will develop the self confidence and lifelong skills applicable to whatever profession they choose.
+
 					</p>
 				</div>
 				<div class="six columns offwhite bb-darkergrey mb2">
-					<p>
-						Many of our brothers take part in Cornell’s YOURS outreach program, which aims to provide opportunities and mentoring for students living in mobile home parks in the area.
-					</p><p>
-						In addition to mentoring, we present simple engineering concepts to the students in an interactive, hands-on method that fosters interest in math, science, and engineering.
+					<p> Throughout the year, we provide ample opportunities for not only brothers to gain professional insight, but the greater engineering community as well. In addition to company information sessions, we host resume critiques, mock interviews, and presentations on a variety of topics.
 					</p>
 				</div>
 			</div>
