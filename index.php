@@ -487,10 +487,10 @@
 			?>
 			<br class="clear"/>
 
-		<h6 class="decorated mt2">Eboard</h6>
+		<h6 class="decorated mt2">Officers</h6>
 
 			<?php
-				if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
+				if( ( $h = fopen( "officer.csv", "r" ) ) !== FALSE )
 						{
 							$row = fgetcsv( $h, 0, "\n" );
 							$eboard = [];
