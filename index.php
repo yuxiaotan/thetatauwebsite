@@ -426,6 +426,55 @@
 				};
 			?>
 			<br class="clear"/>
+
+		<h6 class="decorated mt2">Eboard</h6>
+
+			<?php
+				if( ( $h = fopen( "core.csv", "r" ) ) !== FALSE )
+						{
+							$row = fgetcsv( $h, 0, "\n" );
+							$eboard = [];
+
+							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
+							{
+								$row = explode( "|", $row[0] );
+								$FN = str_replace( " ", "", $row[0] );
+								$LN = str_replace( " ", "", $row[1] );
+								$Position = $row[2];
+								$bio = $row[3];
+								$eboard[ $Position ] = [
+									"full_name" => $FN." ".$LN,
+									"bio" => $bio
+								];
+							}
+						}
+
+						foreach( $eboard as $position => $data )
+						{
+							$strName = $data[ "full_name" ];
+							$Name = str_replace( " ", "_", $data["full_name"] );
+
+							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
+							$img_path = "img/brothers/".$img_name.".png";
+
+							if( !file_exists( $img_path ) )
+							{
+								$img_path = "img/brothers/noshow.png";
+							}
+			?>
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
+					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
+					</div>
+					<div class="h110 h110-eboard">
+						<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
+						<p class="center caption"><?php echo $position ?></p>
+					</div>
+				</div>
+			<?php
+				};
+			?>
+			<br class="clear"/>
 			<h6 class="decorated mt2">Semesterly Eboard</h6>
 			<?php
 				if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
@@ -668,7 +717,7 @@ foreach( $eboard as $position => $data )
 					<div class="bg-white">
 						<div class="overlay"
 							 style="background: url(<?php echo $img_path; ?>);
-							     	background-size:   cover;              
+							     	background-size:   cover;
 									background-repeat: no-repeat;
 									background-position: center 30%; ">
 							<div class="overlay modal-header pb3 pl3 pr3"
@@ -692,7 +741,7 @@ foreach( $eboard as $position => $data )
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div>
-			
+
 
 			<div id="desktop">
 				<div class="modal-dialog">
@@ -700,9 +749,9 @@ foreach( $eboard as $position => $data )
 						<div class="row">
 							<div class="six columns width-50p"
 								 style="background: url(<?php echo $img_path; ?>);
-								     	background-size:   cover;              
+								     	background-size:   cover;
 										background-repeat: no-repeat;
-										background-position: center 30%; 
+										background-position: center 30%;
 										height: 550px">
 							</div>
 
@@ -780,7 +829,7 @@ foreach( $eboard as $position => $data )
 					<div class="bg-white">
 						<div class="overlay"
 							 style="background: url(<?php echo $img_path; ?>);
-							     	background-size:   cover;              
+							     	background-size:   cover;
 									background-repeat: no-repeat;
 									background-position: center 30%; ">
 							<div class="overlay modal-header pb3 pl3 pr3"
@@ -804,7 +853,7 @@ foreach( $eboard as $position => $data )
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div>
-			
+
 
 			<div id="desktop">
 				<div class="modal-dialog">
@@ -812,9 +861,9 @@ foreach( $eboard as $position => $data )
 						<div class="row">
 							<div class="six columns width-50p"
 								 style="background: url(<?php echo $img_path; ?>);
-								     	background-size:   cover;              
+								     	background-size:   cover;
 										background-repeat: no-repeat;
-										background-position: center 30%; 
+										background-position: center 30%;
 										height: 550px">
 							</div>
 
