@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(window).load(function () {
 	var currentTallest = 0,
      currentRowStart = 0,
      rowDivs = new Array(),

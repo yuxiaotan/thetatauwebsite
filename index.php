@@ -21,6 +21,9 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+
 		<!-- Javascript plugins -->
 		<script src="js/jquery.js"></script>
 		<script src="js/custom.js"></script>
@@ -131,7 +134,7 @@
 
 <!-- Apply Now
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
+  <!-- <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
     <div class="row mx-auto">
 	    <div class="six columns p4">
 			  <div class="row mx-auto bb-grey mb3">
@@ -183,13 +186,13 @@
 
 			</div>
     </div>
-  </div>
+  </div> -->
 
   <!-- About Us
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="about-us" class="container pt0 pb1 ">
+  <div id="about-us" class="container pt3 pb1 ">
     <div class="row mx-auto">
-      <div class="three columns pt2">
+      <div class="two columns pt2">
       </div>
       <div class="nine columns  pt2 pb2">
         <div class="row">
@@ -209,15 +212,8 @@
     </div>
     <div class="row mx-auto">
 
-    <div class="center two columns pt2 pb0">
-		<img src="img/ttcrest.png"></img>
-		<!--
-			<h6 class="h7 decorated-2 mb0 mt1">Andrew Aquino</h6>
-			<p class="caption">Marketing Chair</p>
-		-->
-    </div>
 
-    <div class="one column pb2"></div>
+    <div class="two columns pb2 pt2"></div>
     <div class="nine columns pt2 pb6">
       <div class="row">
         <p>
@@ -413,11 +409,11 @@
 								$img_path = "img/brothers/noshow.png";
 							}
 			?>
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
-					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+					<div class="" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<div class="h110 h110-eboard">
+					<div class="">
 						<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 						<p class="center caption"><?php echo $position ?></p>
 					</div>
@@ -471,11 +467,11 @@
 			?>
 
 
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
-					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+					<div class="" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<div class="h110 h110-eboard">
+					<div class="">
 						<h6 class="center h7 decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 						<p class="center caption"><?php echo $position ?></p>
 					</div>
@@ -522,11 +518,11 @@
 								$img_path = "img/brothers/noshow.png";
 							}
 			?>
-				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small">
-					<div class="h195 h195-eboard" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
+				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
+					<div class="" style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $position."_".$Name ?>']">
 						<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>"/>
 					</div>
-					<div class="h110 h110-eboard">
+					<div class="">
 						<h6 class="h7 center decorated-2 mb0 mt1"><?php echo $strName ?></h6>
 						<p class="center caption"><?php echo $position ?></p>
 					</div>
@@ -591,11 +587,11 @@
 						$img_path = "img/brothers/noshow.png";
 					}
 			?>
-          <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small">
-			<div class="h195"style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
+          <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small blocks">
+			<div class=""style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
 				<img src="<?php echo $img_path; ?>" alt="<?php echo $strName; ?>">
             </div>
-            <div class="h110">
+            <div class="">
 				<h6 class="h7 center decorated-2 mt1 mb2"><?php echo $strName ?></h6><br>
 			</div>
           </div>
