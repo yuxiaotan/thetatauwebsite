@@ -134,26 +134,40 @@
 
 <!-- Apply Now
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
+  <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
+       	<div>
+    		<center>
+			 <h6 class="decorated-2 mb3" style="margin:0; padding-top: 40px;">Spring Recruitment Application</h6>
+    		</center>
+    	</div>
     <div class="row mx-auto">
-	    <div class="six columns p4">
-			  <div class="row mx-auto bb-grey mb3">
-			      <h6 class="decorated-2 mb3 ">Fall Recruitment Application</h6>
-			      <h6 class="mb0">Information Session 1</h6>
-			      <p class="caption"> September 3 | 7:00PM - 9:00PM | Olin 155 </p>
-			      <h6 class="mb0">Information Session 2</h6>
-			      <p class="caption"> September 8 | 7:00PM - 9:00PM | Olin 255 </p>
-			  </div>
-			  <div class="row mx-auto mb0">
-			      <p class="h7 regular grey caption mb0 ">1. Sophomores and First Semester Juniors only</p>
-			      <p class="h7 regular grey caption mb0 ">2. GPA of 2.5 or higher</p>
-			      <p class="h7 regular grey caption mb0 ">3. Information Session is strongly recommended.</p>
-			      <p class="h6 regular grey caption mb0 ">4. Include your GPA on your resume.</p>
-			  </div>
-	    </div>
-
-
-			<div class="six columns p4">
+    	<div class="six columns p4">
+			<h6 class="mb0">Information Session 1</h6>
+			<p class="caption"> February 1 | 7:00PM - 9:00PM | Olin 155 </p>  
+    	</div>
+    	<div class="six columns p4">
+			<h6 class="mb0">Information Session 2</h6>
+			<p class="caption"> February 2 | 7:00PM - 9:00PM | Olin 155 </p>
+    	</div>
+    </div>
+    <div style="padding: 0 40px 40px 40px;">
+	      <p class="h7 regular grey caption mb0 ">1. Freshmen or Sophomores enrolled in an Engineering program (Includes Computer Science, Information Science, and Biological Engineering outside the College of Engineering).</p>
+	      <p class="h7 regular grey caption mb0 ">2. Must be at least 18 years of age at the time of initiation.</p>
+	      <p class="h7 regular grey caption mb0 ">3. Must have a cumulative GPA of 2.5 or higher. Please include GPA on resume.</p>
+	      <p class="h6 regular grey caption mb0 ">4. Information Session attendance strongly encouraged.</p>
+	</div>
+	<div class="p4">
+		<a name="form777100144" id="formAnchor777100144"></a>
+		<script type="text/javascript" src="https://fs12.formsite.com/include/form/embedManager.js?777100144"></script>
+		<script type="text/javascript">
+		EmbedManager.embed({
+			key: "https://fs12.formsite.com/res/showFormEmbed?EParam=B6fiTn%2BRcO7wdV3ZKJEjbkHp%2BOxx3Si2&777100144",
+			width: "100%",
+			mobileResponsive: true
+		});
+		</script>
+	</div>
+<!-- 			<div class="six columns p4">
 
 				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true" onsubmit="return validateForm()">
 					<input type="hidden" name="formID" value="52391084313147">
@@ -184,9 +198,9 @@
 				</div>
       	</form>
 
-			</div>
-    </div>
-  </div> -->
+			</div> -->
+
+  </div>
 
   <!-- About Us
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -254,20 +268,18 @@
 					<p>
 						One of the three main pillars of Theta Tau is service, and throughout the year, our brothers look forward to giving back to the Ithaca-Tompkins County community at large.
 					</p><p>
-						Some of the events include Into the Streets, a student-led program that sponsors an enormous annual service event, and Truss Days, an event held by Habitat for Humanity that builds roof trusses for families in need of housing.
-					</p>
+						We support service events at Cornell such as Into the Streets, a student-led program that sponsors an enormous annual service event, and many more. Each semester, our new member class takes the lead in hosting our main service event to raise funds for our charity of choice.						</p>
 				</div>
 				<div class="six columns offwhite bb-darkergrey mb2">
 					<p>
-						Many of our brothers take part in Cornell’s YOURS outreach program, which aims to provide opportunities and mentoring for students living in mobile home parks in the area.
+						Many of our brothers also take part in Cornell’s YOURS outreach program, which aims to provide opportunities and mentoring for students living in mobile home parks in the area. Here we are able to present simple engineering concepts to the students in an interactive, hands-on method that fosters interest in math, science, and engineering.
 					</p><p>
-						In addition to mentoring, we present simple engineering concepts to the students in an interactive, hands-on method that fosters interest in math, science, and engineering.
-					</p>
+						In addition to mentoring, we host many events during the year to aid any member of the Cornell community in developing professionalism. 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="two column center">
-					<h6 class="h7 decorated-3 mb0 mt1 ">Sahitya Mantravadi</h6>
+					<h6 class="h7 decorated-3 mb0 mt1 ">Richa Deshpande</h6>
 					<p class="caption ">Philanthropy Chair</p>
 				</div>
 			</div>
@@ -276,27 +288,24 @@
 			<div class="row mt4">
 				<div class="six columns offwhite">
 					<p>
-						At Cornell Theta Tau, the bonds we make are integral to our Cornell experiences and even to our future professional careers. Robyn and I, as co-social chairs, are in charge of planning and organizing interactive activities at which brothers strengthen friendships and make memories. The brothers of Theta Tau have enjoyed formal events scheduled at the end of every semester, date nights, pledge class bonding events, and excursions to off-campus activities, such as apple picking and team building.
+						At Cornell Theta Tau, the bonds we make are integral to our Cornell experiences and to our future professional careers. Nikita and Pavan, the social chairs, are in charge of planning and organizing interactive activities were brothers strengthen friendships and make memories. The brothers of Theta Tau have enjoyed formal events scheduled at the end of every semester, date nights, pledge class bonding events, and excursions to off-campus activities, such as apple picking, go-karting, and team building.
 					</p><p>
-						Events are also focused on the Cornell community. Inter-fraternity events with other professional fraternities at Cornell as well as Slope Day are a few favorite events.
+						Events are also focused on the Cornell community. Inter-fraternity events with other professional fraternities at Cornell as well as Slope Day are a few favorite events. We are keen on maintaining strong relationships within the Brotherhood as well as expanding our network by hosting social events with other professional fraternities at Cornell.
 					</p>
 				</div>
 				<div class="six columns offwhite bb-darkergrey mb2">
 					<p>
-						Brotherhood is one of the primary tenants of Theta Tau and as such, we make aim to provide ample opportunities brothers to create bonds and memories that will last a lifetime.
+						Brotherhood is one of the primary tenants of Theta Tau and as such, we make aim to provide ample opportunities for brothers to create bonds and memories that will last a lifetime.
 					</p><p>
-						We are keen on maintaining strong relationships within the Brotherhood as well as expanding our network by hosting social events with other professional fraternities at Cornell.
-					</p><p>
-						The end of spring semester is always a sentimental time for Theta Tau. We hold a senior sendoff each spring to celebrate their achievements from their time at Cornell as well as bidding them a heartfelt farewell. Seniors often return to visit the brotherhood that they grew to love during their college careers.
-					</p>
+						The end of spring semester is always a sentimental time for Theta Tau. We hold a senior sendoff each spring to celebrate the graduates' achievements from their time at Cornell as well as bidding them a heartfelt farewell. Seniors often return to visit the brotherhood that they grew to love during their college careers.					</p>
 				</div>
 			</div>
 			<div class="row center">
 				<div class="six columns">
-					<h6 class="h7 decorated-3 mb0 mt1 ">TJ Famighetti</h6>
+					<h6 class="h7 decorated-3 mb0 mt1 ">Pavan Yalla</h6>
 					<p class="caption ">Social Chair</p>
 				</div><div class="six columns">
-					<h6 class="h7 decorated-3 mb0 mt1 ">Robyn Nason</h6>
+					<h6 class="h7 decorated-3 mb0 mt1 ">Nikita Gupta</h6>
 					<p class="caption ">Social Chair</p>
 				</div>
 			</div>
@@ -304,18 +313,17 @@
 		<div id="professionalism">
 			<div class="row mt4">
 				<div class="six columns offwhite">
-					<p> Professionalism is one of the three main tenants of Theta Tau. We strive to educate new members on key aspects of professionalism in the hopes that all brothers of Theta Tau will develop the self confidence and lifelong skills applicable to whatever profession they choose.
-
+					<p> Professionalism is one of the three main tenants of Theta Tau. We strive to provide resources and educational opportunities for both new members and brothers, with the hope that all brothers will develop the self confidence, self awareness, and lifelong skills applicable to whatever profession they choose. 
 					</p>
 				</div>
 				<div class="six columns offwhite bb-darkergrey mb2">
-					<p> Throughout the year, we provide ample opportunities for not only brothers to gain professional insight, but the greater engineering community as well. In addition to company information sessions, we host resume critiques, mock interviews, and presentations on a variety of topics.
+					<p> Throughout the year, we serve not only our members but the greater engineering community by hosting information sessions, resume critiques, mock interviews, and presentations on a variety of topics. Professional development is based in personal development, and Theta Tau provides great opportunities to assist brothers in finding and following their own paths.
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="two column center">
-					<h6 class="h7 decorated-3 mb0 mt1 ">Jean Ye</h6>
+					<h6 class="h7 decorated-3 mb0 mt1 ">Hannah Rudin</h6>
 					<p class="caption ">Professional Development Chair</p>
 				</div>
 			</div>
@@ -342,6 +350,22 @@
 		<?php
 			$count = 1;
 			$dir = "img/employers";
+			$employers = glob( $dir."/*.png" );
+
+			foreach( $employers as $employer )
+			{
+		?>
+				<div class="col col-4 sm-col sm-col-4 md-col-3 lg-col-2 sublabel blocks pt2 pb2 pr2 pl2">
+							<img class="employer-logo vertical-align" src="<?php echo $employer; ?>"/>
+				</div>
+		<?php
+			}
+		?>
+		</div>
+		<div class="row">
+		<?php
+			$count = 1;
+			$dir = "img/schools";
 			$employers = glob( $dir."/*.png" );
 
 			foreach( $employers as $employer )
@@ -423,7 +447,7 @@
 			?>
 			<br class="clear"/>
 
-			<h6 class="decorated mt2">Semesterly Eboard</h6>
+			<h6 class="decorated mt2">Semesterly Eboard and Officers</h6>
 			<?php
 				if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 						{
@@ -433,8 +457,8 @@
 							while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 							{
 								$row = explode( "|", $row[0] );
-								$FN = str_replace( " ", "", $row[0] );
-								$LN = str_replace( " ", "", $row[1] );
+								$FN = $row[0];
+								$LN = $row[1];
 								$Position = $row[2];
 								$bio = $row[3];
 								$eboard[ $Position ] = [
@@ -483,7 +507,7 @@
 			?>
 			<br class="clear"/>
 
-		<h6 class="decorated mt2">Officers</h6>
+<!-- 		<h6 class="decorated mt2">Officers</h6>
 
 			<?php
 				if( ( $h = fopen( "officer.csv", "r" ) ) !== FALSE )
@@ -530,7 +554,7 @@
 			<?php
 				};
 			?>
-			<br class="clear"/>
+			<br class="clear"/> -->
 
 	</div>
 </div>
@@ -543,9 +567,14 @@
 				$row = fgetcsv( $h, 0, "\n" );
 				$brother_info = [];
 
+
+
 				while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 				{
 					$row = explode( "|", $row[0] );
+
+					//echo( var_dump( $row ) );
+
 					$FN = $row[0];
 					$LN = $row[1];
 					$Class = $row[2];
@@ -622,16 +651,16 @@
 				<div class="ten columns">
 					<div class="row">
 						<div class="three columns">
-							<p class="grey lh2">Jonya Chen<br>Regent<br><a href="#">jc957@cornell.edu</a></p>
+							<p class="grey lh2">Arpit Sheth<br>Regent<br><a href="#">ass222@cornell.edu</a></p>
 						</div>
 						<div class="three columns">
-							<p class="grey lh2">Adrian Wu<br>Treasurer<br><a href="#">acw82@cornell.edu</a></p>
+							<p class="grey lh2">Taylor Schoettle<br>Treasurer<br><a href="#">tjs323@cornell.edu</a></p>
 						</div>
 						<div class="three columns">
-							<p class="grey lh2">Yuxiao Tan<br>Vice Regent<br><a href="#">yt358@cornell.edu</a></p>
+							<p class="grey lh2">Brittney Chew<br>Vice Regent<br><a href="#">bac245@cornell.edu</a></p>
 						</div>
 						<div class="three columns">
-							<p class="grey lh2">Kelsey Evans<br>Scribe<br><a href="#">kee37@cornell.edu</a></p>
+							<p class="grey lh2">Sahitya Mantravadi<br>Scribe<br><a href="#">sm987@cornell.edu</a></p>
 						</div>
 					</div>
 				</div>
@@ -680,8 +709,8 @@ if( ( $h = fopen( "semester.csv", "r" ) ) !== FALSE )
 	while( ($row = fgetcsv( $h, 0, "\n" ) ) !== FALSE )
 	{
 		$row = explode( "|", $row[0] );
-		$FN = str_replace( " ", "", $row[0] );
-		$LN = str_replace( " ", "", $row[1] );
+		$FN = $row[0];
+		$LN = $row[1];
 		$Position = $row[2];
 		$bio = $row[3];
 
