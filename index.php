@@ -138,6 +138,8 @@
        	<div>
     		<center>
 			 <h6 class="decorated-2 mb3" style="margin:0; padding-top: 40px;">Spring Recruitment Application</h6>
+			 <h7 class="decorated-2 mb3" style="margin:0; padding-top: 40px;">DEADLINE: FEBRUARY 3 @ NOON</h6>
+
     		</center>
     	</div>
     <div class="row mx-auto">
