@@ -428,11 +428,11 @@
 							$Name = str_replace( " ", "_", $data["full_name"] );
 
 							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
-							$img_path = "img/brothers/".$img_name.".png";
+							$img_path = "img/brothers/".$img_name.".jpg";
 
 							if( !file_exists( $img_path ) )
 							{
-								$img_path = "img/brothers/noshow.png";
+								$img_path = "img/brothers/".$img_name.".png";
 							}
 			?>
 				<div class="col sm-col sm-col-4 md-col-3 lg-col-2 sublabel p-small blocks">
@@ -479,16 +479,11 @@
 							$Name = str_replace( " ", "_", $data["full_name"] );
 
 							$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
-							$img_path = "img/brothers/".$img_name.".png";
-
-              if( !file_exists( $img_path ) )
-              {
-							  $img_path = "img/brothers/".$img_name.".jpg";
-              }
+							$img_path = "img/brothers/".$img_name.".jpg";
 
 							if( !file_exists( $img_path ) )
 							{
-								$img_path = "img/brothers/noshow.png";
+								$img_path = "img/brothers/".$img_name.".png";
 							}
 			?>
 
@@ -606,17 +601,20 @@
 					$Name = str_replace( " ", "_", $data["full_name"] );
 
 					$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
-					$img_path = "img/brothers/".$img_name.".png";
+							$img_path = "img/brothers/".$img_name.".jpg";
 
-          if( !file_exists( $img_path ) )
-          {
-            $img_path = "img/brothers/".$img_name.".jpg";
-          }
+							if( !file_exists( $img_path ) )
+							{
+								$img_path = "img/brothers/".$img_name.".png";
 
-					if( !file_exists( $img_path ) )
-					{
-						$img_path = "img/brothers/noshow.png";
-					}
+									if( !file_exists( $img_path ) )
+									{
+										$img_path = "img/brothers/noshow.png";
+
+
+										
+									}
+							}
 			?>
           <div class="col sm-col sm-col-4 md-col-2 lg-col-2 p-small blocks">
 			<div class=""style="cursor:pointer" data-toggle="modal" data-target="[name = '<?php echo $class_name."_".$Name ?>']">
@@ -730,11 +728,18 @@ foreach( $eboard as $position => $data )
 	$bio = $data["bio"];
 
 	$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
-	$img_path = "img/brothers/".$img_name.".png";
+	$img_path = "img/brothers/".$img_name.".jpg";
 
 	if( !file_exists( $img_path ) )
 	{
-		$img_path = "img/brothers/noshow.png";
+		$img_path = "img/brothers/".$img_name.".png";
+		if( !file_exists( $img_path ) )
+		{
+			$img_path = "img/brothers/noshow.png";
+
+			
+		}
+
 	}
 ?>
 
@@ -843,11 +848,18 @@ foreach( $eboard as $position => $data )
 			$strName = $data[ "full_name" ];
 			$Name = str_replace( " ", "_", $data["full_name"] );
 			$img_name = strtolower($Name[0].str_replace( "_", "", substr( $Name, strpos( $Name, "_") ) ));
-			$img_path = "img/brothers/".$img_name.".png";
+			$img_path = "img/brothers/".$img_name.".jpg";
 
 			if( !file_exists( $img_path ) )
 			{
-				$img_path = "img/brothers/noshow.png";
+				$img_path = "img/brothers/".$img_name.".png";
+				if( !file_exists( $img_path ) )
+				{
+					$img_path = "img/brothers/noshow.png";
+
+					
+				}
+
 			}
 	?>
 		<!-- MODAL STUFF -->
