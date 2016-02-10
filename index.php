@@ -85,7 +85,7 @@
 
 <ul class="navigation mobile">
     <li class="nav-item"><a class="nav-home" >Home</a></li>
-    <li class="nav-item"><a class="nav-apply">Apply</a></li>
+<!--     <li class="nav-item"><a class="nav-apply">Apply</a></li> -->
     <li class="nav-item"><a class="nav-about-us">About</a></li>
     <li class="nav-item"><a class="nav-portfolio">Portfolio</a></li>
     <li class="nav-item"><a class="nav-brothers">Brothers</a></li>
@@ -134,7 +134,7 @@
 
 <!-- Apply Now
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
+ <!--  <div id="apply" class="container w-800 bg-lightgrey-2 bb-grey block stagger1">
        	<div>
     		<center>
 			 <h6 class="decorated-2 mb3" style="margin:0; padding-top: 40px;">Spring Recruitment Application</h6>
@@ -168,7 +168,10 @@
 			mobileResponsive: true
 		});
 		</script>
-	</div>
+	</div> -->
+	
+	<!-- dont use the form below me use the one above me :) -->
+
 <!-- 			<div class="six columns p4">
 
 				<form class="jotform-form" action="http://submit.jotform.us/submit/52391084313147/" method="post" enctype="multipart/form-data" name="form_52391084313147" id="52391084313147" accept-charset="utf-8" novalidate="true" onsubmit="return validateForm()">
@@ -202,7 +205,7 @@
 
 			</div> -->
 
-  </div>
+  <!-- </div> -->
 
   <!-- About Us
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
